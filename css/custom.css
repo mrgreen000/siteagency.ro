@@ -331,7 +331,7 @@ input:focus, textarea:focus {
   box-shadow:
     0 15px 40px rgba(239, 43, 112, 0.2),
     0 0 0 1px rgba(239, 43, 112, 0.1);
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
@@ -350,7 +350,7 @@ input:focus, textarea:focus {
 }
 
 .pricing-card-featured-custom:hover {
-  transform: scale(1.07) translateY(-8px);
+  transform: scale(1.05) translateY(-8px);
   box-shadow: 0 35px 70px rgba(239, 43, 112, 0.4);
 }
 
@@ -376,10 +376,18 @@ input:focus, textarea:focus {
 .main-nav {
   position: relative;
   width: 100%;
-  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
   background: white;
   border-bottom: 1px solid #e5e7eb;
+}
+
+.main-nav > .max-w-screen-xl {
+  flex: 1;
+  width: 100%;
 }
 
 .hero-section {
