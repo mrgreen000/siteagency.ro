@@ -1,0 +1,25 @@
+{
+  "name": "digital-pro-agency",
+  "version": "1.0.0",
+  "description": "Professional agency website for web design, SEO, and digital marketing services",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite --port 5177",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "keywords": [
+    "web-design",
+    "seo",
+    "digital-marketing",
+    "romanian-business"
+  ],
+  "author": "Digital Pro",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.55.1"
+  }
+}
