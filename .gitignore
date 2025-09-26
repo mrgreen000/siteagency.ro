@@ -1,0 +1,57 @@
+# AI Assistant Files
+.claude/
+claude.md
+project.md
+agents.md
+
+# IDE and Editor
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# Shell History
+.history
+.bash_history
+.zsh_history
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies - CRITICAL
+node_modules/
+vendor/
+.pnp
+.pnp.js
+
+# Build Files
+dist/
+build/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Development docs
+docs/internal/
+notes/
+TODO.md
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Package manager files
+package-lock.json  # Include or exclude based on preference
+yarn.lock         # Include or exclude based on preference
+pnpm-lock.yaml   # Include or exclude based on preference

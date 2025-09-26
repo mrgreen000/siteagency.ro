@@ -1,0 +1,12 @@
+account_id = "3f61edc7e05ae99a6eddb9a0fb862ba7"
+compatibility_date = "2021-10-16"
+name = "marketing-ui-demo"
+route = 'flowbite.com/marketing-ui/demo/*'
+type = "webpack"
+usage_model = 'bundled'
+workers_dev = true
+# zone_id = '747b8c42fb2a8562000faedb479c0744'
+
+[site]
+main = "workers-site"
+bucket = "/.build/"
