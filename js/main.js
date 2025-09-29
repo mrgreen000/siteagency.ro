@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const sections = document.querySelectorAll('section');
 
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+            const sectionTop = section.offsetTop - 160;
             const sectionHeight = section.clientHeight;
             if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
@@ -113,39 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Premium interactions and animations
-    const premiumCards = document.querySelectorAll('.premium-card');
-    const serviceCards = document.querySelectorAll('.service-card');
-
-    // Add premium hover effects
-    premiumCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-12px) scale(1.03)';
-            this.style.transition = 'all 0.4s cubic-bezier(0.23, 1, 0.32, 1)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-
-    // Add service card counter animations
-    serviceCards.forEach((card, index) => {
-        card.addEventListener('mouseenter', function() {
-            const icon = this.querySelector('i');
-            if (icon) {
-                icon.style.transform = 'scale(1.2) rotate(10deg)';
-                icon.style.transition = 'all 0.3s ease';
-            }
-        });
-
-        card.addEventListener('mouseleave', function() {
-            const icon = this.querySelector('i');
-            if (icon) {
-                icon.style.transform = 'scale(1) rotate(0deg)';
-            }
-        });
-    });
+    // Removed premium hover effects - handled by CSS now
 
     // Scroll-triggered animations
     const animateOnScroll = new IntersectionObserver((entries) => {
@@ -173,43 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         animateOnScroll.observe(el);
     });
 
-    // Premium number counting animation
-    const numberElements = document.querySelectorAll('.animate-text-shine');
-    const numberObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = entry.target;
-                const text = target.textContent;
-
-                if (text.includes('+') || text.includes('%')) {
-                    animateNumber(target);
-                }
-            }
-        });
-    });
-
-    numberElements.forEach(el => {
-        numberObserver.observe(el);
-    });
-
-    function animateNumber(element) {
-        const text = element.textContent;
-        const number = parseInt(text.replace(/[^\d]/g, ''));
-        const suffix = text.replace(/[\d]/g, '');
-
-        if (number) {
-            let current = 0;
-            const increment = number / 50;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= number) {
-                    current = number;
-                    clearInterval(timer);
-                }
-                element.textContent = Math.floor(current) + suffix;
-            }, 30);
-        }
-    }
+    // Removed number counting animation - too distracting
 
     // CTA button click tracking (for analytics)
     document.querySelectorAll('a[href="#contact"], button').forEach(button => {
