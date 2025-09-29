@@ -56,12 +56,41 @@ html {
   opacity: 1;
 }
 
-/* Navigation active state */
+/* Navigation active state - Desktop */
 .nav-link.active {
-  color: #ef2b70;
-  font-weight: 600;
-  border-bottom: 2px solid #ef2b70;
-  padding-bottom: 2px;
+  color: #ef2b70 !important;
+  font-weight: 700 !important;
+  position: relative;
+}
+
+/* Desktop navigation underline */
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ef2b70 0%, #8b5cf6 100%);
+  border-radius: 2px;
+}
+
+/* Stronger selector for active nav links */
+nav .nav-link.active,
+ul .nav-link.active,
+li .nav-link.active,
+a.nav-link.active {
+  color: #ef2b70 !important;
+  font-weight: 700 !important;
+}
+
+/* Mobile navigation active state */
+.nav-link.active.block {
+  color: #ef2b70 !important;
+  font-weight: 700 !important;
+  border-left: 4px solid #ef2b70 !important;
+  background-color: rgba(239, 43, 112, 0.1) !important;
+  padding-left: 12px !important;
 }
 
 /* Service card hover effects */
@@ -221,6 +250,9 @@ input:focus, textarea:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
+  /* Ensure text remains readable if gradients fail */
+  text-shadow: none;
 }
 
 /* Removed pulse glow - too distracting */
@@ -288,7 +320,7 @@ input:focus, textarea:focus {
   padding: 2px;
   background: linear-gradient(45deg, rgba(255,255,255,0.3), transparent, rgba(255,255,255,0.3));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: exclude;
+  -webkit-mask-composite: xor; /* Safari compatibility */
   mask-composite: exclude;
   pointer-events: none;
 }
@@ -300,14 +332,17 @@ input:focus, textarea:focus {
 
 /* Safari-compatible sticky header styles */
 .header-container {
+  position: -webkit-sticky; /* Safari compatibility first */
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 1000;
   background: white;
+  /* Add transform to force Safari to create a new stacking context */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .offer-bar {

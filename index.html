@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Digital Pro - Web Design & Marketing Digital pentru Saloane și Clinici | Romania</title>
     <meta name="description" content="Website-uri profesionale, SEO și marketing digital pentru saloane de frumusețe, clinici medicale și afaceri locale în România. Prețuri transparente, rezultate măsurabile.">
     <meta name="keywords" content="web design romania, seo saloane frumusete, marketing digital clinici medicale, website salon, site clinica, bucuresti">
@@ -45,13 +45,11 @@
         <div class="offer-bar relative bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 text-white py-3 px-4 text-center overflow-hidden">
             <div class="sparkle absolute inset-0"></div>
             <div class="relative z-10">
-                <span class="font-bold text-sm md:text-base">
-                    🔥 OFERTĂ LIMITATĂ: 50% REDUCERE la primul website + SEO GRATUIT!
-                    <span class="animate-pulse">⏰ Doar 48 de ore!</span>
-                    <a href="#contact" class="ml-4 bg-white text-red-600 px-4 py-1 rounded-full font-bold text-sm hover:bg-gray-100 transition-colors">
-                        Profită ACUM
-                    </a>
-                </span>
+                <div class="font-bold text-sm md:text-base">
+                    <span class="inline">🔥 OFERTĂ: 50% REDUCERE!</span>
+                    <span class="hidden md:inline"> la primul website + SEO GRATUIT!</span>
+                    <span class="animate-pulse inline ml-2">⏰ 48 ore!</span>
+                </div>
             </div>
         </div>
 
@@ -59,28 +57,32 @@
         <nav class="main-nav shadow-lg" role="navigation" aria-label="Main navigation">
         <div class="max-w-screen-xl mx-auto py-2 px-4">
             <!-- Mobile Layout -->
-            <div class="flex flex-col space-y-4 md:hidden">
-                <a href="#home" class="flex items-center justify-center space-x-3">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
-                            <span class="text-white font-bold text-xl">DP</span>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-2xl font-bold text-gradient leading-none">Digital Pro</span>
-                            <span class="text-xs text-gray-500 leading-none">Marketing Agency</span>
-                        </div>
+            <div class="flex items-center justify-between md:hidden">
+                <a href="#home" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
+                        <span class="text-white font-bold text-xl">DP</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-gradient leading-none">Digital Pro</span>
+                        <span class="text-xs text-gray-500 leading-none">Marketing Agency</span>
                     </div>
                 </a>
-                <div class="flex justify-center">
-                    <button type="button" class="btn-primary text-white font-semibold text-sm px-6 py-3 text-center">
-                        Solicită Ofertă
-                    </button>
-                    <button data-collapse-toggle="mobile-menu" type="button" id="mobile-menu-button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg ml-2 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                        </svg>
-                    </button>
+                <button data-collapse-toggle="mobile-menu" type="button" id="mobile-menu-button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Acasă</a>
+                    <a href="#services" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Servicii</a>
+                    <a href="#portfolio" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Portofoliu</a>
+                    <a href="#pricing" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Prețuri</a>
+                    <a href="#contact" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Contact</a>
                 </div>
             </div>
 
@@ -114,9 +116,9 @@
 
                 <!-- Button - Right -->
                 <div class="flex-shrink-0">
-                    <button type="button" class="btn-primary text-white font-semibold text-sm px-6 py-3 text-center">
+                    <a href="#contact" class="btn-primary text-white font-semibold text-sm px-6 py-3 text-center inline-block">
                         Solicită Ofertă
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -393,152 +395,164 @@
         <div class="max-w-screen-xl px-4 mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-bold mb-4"><span class="text-gradient">Pachete cu Rezultate Garantate</span></h2>
-                <p class="text-xl text-gray-600">🔥 <strong>PROMOȚIE 50% REDUCERE</strong> - Prețuri transparente, REZULTATE GARANTATE!</p>
-                <div class="mt-4 inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full">
+                <p class="text-xl text-gray-600 mb-6">🔥 <strong>PROMOȚIE 50% REDUCERE</strong> - Prețuri transparente, REZULTATE GARANTATE!</p>
+                <div class="mt-4 inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full mb-8">
                     <span class="animate-pulse">⏰</span>
                     <span class="font-bold">Oferta expiră în 48 de ore!</span>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Starter Plan -->
+                <!-- Foundation Plan -->
                 <div class="flex flex-col p-6 text-center premium-card relative animate-fade-in-up h-full">
-                    <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">-50%</div>
                     <div class="flex-grow">
-                        <h3 class="mb-4 text-3xl font-bold text-gray-900">SALON STARTER</h3>
-                        <p class="font-medium text-gray-600 text-lg">Pentru saloane noi</p>
+                        <h3 class="mb-4 text-3xl font-bold text-gray-900">FOUNDATION</h3>
+                        <p class="font-medium text-gray-600 text-lg">Site prezentare 1 pagină</p>
                         <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-2xl font-bold text-gray-400 line-through">599€</span>
-                            <span class="mr-2 text-6xl font-extrabold text-gradient">299€</span>
+                            <span class="mr-2 text-6xl font-extrabold text-gradient">290€</span>
                         </div>
                         <div class="bg-green-100 text-green-800 px-4 py-2 rounded-lg mb-6">
-                            <span class="font-bold">GARANTIE: +50 clienți noi în 30 zile!</span>
+                            <span class="font-bold">Toate caracteristicile cheie incluse!</span>
                         </div>
                         <ul role="list" class="mb-8 space-y-4 text-left">
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Website 5 pagini</span>
+                            <span>1 pagină landing page</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Design responsive</span>
+                            <span>SEO optimizat</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Formular de contact</span>
+                            <span>Mobile friendly</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>1 an hosting gratuit</span>
                         </li>
                     </ul>
                     </div>
                     <div class="pt-6">
                         <a href="#contact" class="btn-primary text-white font-bold text-lg px-8 py-4 text-center inline-block w-full">
-                            🚀 VREAU ACEASTĂ OFERTĂ!
+                            Comandă Acum
                         </a>
                     </div>
                 </div>
 
                 <!-- Professional Plan -->
                 <div class="flex flex-col p-6 text-center relative pricing-card-featured-custom h-full">
-                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-5 py-1.5 rounded-full text-xs font-bold shadow-xl whitespace-nowrap flex items-center z-10 border-2 border-white">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-1.5 rounded-full text-xs font-bold shadow-xl whitespace-nowrap flex items-center z-10 border-2 border-white">
                         <span class="text-lg mr-1">⭐</span>
                         <span class="uppercase tracking-wider">Cel Mai Popular</span>
                         <span class="text-lg ml-1">⭐</span>
                     </div>
-                    <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-md">-50%</div>
                     <div class="flex-grow">
-                        <h3 class="mb-4 text-3xl font-bold text-white">CLINICĂ PRO</h3>
-                        <p class="font-medium text-white/90 text-lg">Pentru creștere explozivă</p>
+                        <h3 class="mb-4 text-3xl font-bold text-white">PROFESSIONAL</h3>
+                        <p class="font-medium text-white/90 text-lg">Site prezentare 5-7 pagini</p>
                         <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-2xl font-bold text-white/60 line-through">1.199€</span>
-                            <span class="mr-2 text-6xl font-extrabold text-white">599€</span>
+                            <span class="mr-2 text-6xl font-extrabold text-white">440€</span>
                         </div>
                         <div class="bg-yellow-400 text-black px-4 py-2 rounded-lg mb-6">
-                            <span class="font-bold">GARANTIE: +200 clienți noi în 45 zile!</span>
+                            <span class="font-bold">Perfect pentru afaceri în creștere!</span>
                         </div>
                         <ul role="list" class="mb-8 space-y-4 text-left">
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Tot ce e în Starter</span>
+                            <span>5-7 pagini complete</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>SEO de bază</span>
+                            <span>Toate caracteristicile cheie</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Google My Business</span>
+                            <span>Multiple formulare</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>1 an găzduire gratuită</span>
+                            <span>Integrări avansate</span>
                         </li>
                     </ul>
                     </div>
                     <div class="pt-6">
                         <a href="#contact" class="bg-white text-pink-600 hover:bg-gray-100 font-bold text-lg px-8 py-4 text-center rounded-lg transition-all duration-300 inline-block w-full">
-                            🔥 DA, VREAU +200 CLIENȚI!
+                            Comandă Acum
                         </a>
                     </div>
                 </div>
 
-                <!-- Business Plan -->
+                <!-- Commerce Growth Plan -->
                 <div class="flex flex-col p-6 text-center premium-card relative animate-fade-in-up h-full" style="animation-delay: 0.4s;">
-                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">-50%</div>
+                    <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">E-COMMERCE</div>
                     <div class="flex-grow">
-                        <h3 class="mb-4 text-3xl font-bold text-gray-900">IMPERIU DIGITAL</h3>
-                        <p class="font-medium text-gray-600 text-lg">Pentru dominația pieței</p>
+                        <h3 class="mb-4 text-3xl font-bold text-gray-900">COMMERCE GROWTH</h3>
+                        <p class="font-medium text-gray-600 text-lg">Magazin online 50 produse</p>
                         <div class="flex justify-center items-baseline my-8">
-                            <span class="mr-2 text-2xl font-bold text-gray-400 line-through">1.999€</span>
-                            <span class="mr-2 text-6xl font-extrabold text-gradient">999€</span>
+                            <span class="mr-2 text-6xl font-extrabold text-gradient">790€</span>
                         </div>
-                        <div class="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg mb-6">
-                            <span class="font-bold">GARANTIE: +500 clienți noi în 60 zile!</span>
+                        <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-lg mb-6">
+                            <span class="font-bold">Magazin complet cu plăți online!</span>
                         </div>
                         <ul role="list" class="mb-8 space-y-4 text-left">
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Tot ce e în Professional</span>
+                            <span>Până la 50 produse</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>SEO avansat</span>
+                            <span>Payment processing</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Setup campanii Google Ads</span>
+                            <span>Gestiune stoc</span>
                         </li>
                         <li class="flex items-center space-x-3">
                             <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
                             </svg>
-                            <span>Mentenanță lunară inclusă</span>
+                            <span>Integrări curieri RO</span>
                         </li>
                     </ul>
                     </div>
                     <div class="pt-6">
                         <a href="#contact" class="btn-secondary text-white font-bold text-lg px-8 py-4 text-center inline-block w-full">
-                            ⚡ VREAU DOMINAȚIA PIEȚEI!
+                            Comandă Acum
                         </a>
                     </div>
+                </div>
+            </div>
+
+            <!-- View All Prices CTA -->
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-pink-600 to-purple-600 text-white p-8 rounded-xl max-w-5xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-4">📋 Vezi Toate Serviciile Noastre</h3>
+                    <p class="mb-6 text-lg">Avem pachete complete pentru web design, SEO, magazine online, campanii ads și multe altele!</p>
+                    <a href="preturi.html" class="bg-white text-pink-600 px-10 py-4 rounded-lg font-bold text-lg inline-block hover:bg-gray-100 transition-colors">
+                        Vezi Toate Prețurile →
+                    </a>
                 </div>
             </div>
         </div>
@@ -827,13 +841,13 @@
                     </p>
                 </div>
                 <div class="flex gap-2 flex-shrink-0">
-                    <button onclick="acceptCookies()" class="bg-yellow-400 text-gray-900 px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-yellow-500 transition-colors whitespace-nowrap">
+                    <button id="accept-cookies" class="bg-yellow-400 text-gray-900 px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-yellow-500 transition-colors whitespace-nowrap">
                         Accept toate
                     </button>
-                    <button onclick="rejectCookies()" class="bg-gray-700 text-white px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-gray-600 transition-colors whitespace-nowrap">
+                    <button id="reject-cookies" class="bg-gray-700 text-white px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-gray-600 transition-colors whitespace-nowrap">
                         Esențiale
                     </button>
-                    <button onclick="closeCookieBar()" class="text-gray-400 hover:text-white transition-colors ml-1">
+                    <button onclick="document.getElementById('cookie-bar').style.display='none'" class="text-gray-400 hover:text-white transition-colors ml-1">
                         <i class="fas fa-times text-lg"></i>
                     </button>
                 </div>
@@ -841,10 +855,15 @@
         </div>
     </div>
 
+    <!-- Hidden dummy elements for Flowbite compatibility -->
+    <div id="themeToggleDarkIcon" class="hidden" style="display: none !important;"></div>
+    <div id="themeToggleLightIcon" class="hidden" style="display: none !important;"></div>
+    <button id="themeToggle" style="display: none !important;"></button>
+
     <!-- Flowbite Pro JS (Local) -->
     <script src="js/flowbite.js"></script>
 
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <!-- Custom App JS -->
+    <script src="js/app.js"></script>
 </body>
 </html>

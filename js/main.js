@@ -10,12 +10,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links and set active state on click
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
+                // Remove active from all nav links
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+
+                // Add active to clicked link (both desktop and mobile versions)
+                if (this.classList.contains('nav-link')) {
+                    this.classList.add('active');
+                    console.log('Clicked nav link, added active class to:', this);
+
+                    // Find and activate the corresponding link in mobile menu
+                    const href = this.getAttribute('href');
+                    document.querySelectorAll(`.nav-link[href="${href}"]`).forEach(link => {
+                        link.classList.add('active');
+                    });
+                }
+
                 const headerOffset = 150;
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -24,10 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
+
                 // Close mobile menu if open
                 if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                     mobileMenu.classList.add('hidden');
                 }
+
+                // Update navigation after scrolling completes (with longer delay)
+                setTimeout(updateNavigation, 800);
             }
         });
     });
@@ -72,26 +93,77 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add active state to navigation based on scroll
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const sections = document.querySelectorAll('section');
+    // Function to update navigation active state based on scroll position
+    function updateNavigation() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
+        if (sections.length === 0) {
+            return; // No sections on this page
+        }
+
+        const scrollPosition = window.scrollY + 250;
+        let currentSection = '';
+
+        // Find which section we're currently in
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 160;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSection = sectionId;
             }
         });
 
-        document.querySelectorAll('.nav-link').forEach(link => {
+        // If we're at the very top, set home as current
+        if (window.scrollY < 300) {
+            currentSection = 'home';
+        }
+
+        console.log('Current section:', currentSection);
+
+        // Update navigation links
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+
+            // Skip links to other pages
+            if (!href || href.includes('.html') || !href.startsWith('#')) {
+                return;
+            }
+
+            // Remove active class
             link.classList.remove('active');
-            if (current && link.getAttribute('href').slice(1) === current) {
+
+            // Add active class if this link matches current section
+            const linkSection = href.replace('#', '');
+            if (linkSection === currentSection) {
                 link.classList.add('active');
+                console.log('Activated:', linkSection);
             }
         });
+    }
+
+    // Debounced scroll handler for better performance
+    let scrollTimer = null;
+    let isScrollingProgrammatically = false;
+
+    window.addEventListener('scroll', function() {
+        if (scrollTimer !== null) {
+            clearTimeout(scrollTimer);
+        }
+        scrollTimer = setTimeout(function() {
+            updateNavigation();
+        }, 150);
     });
+
+    // Run on page load
+    window.addEventListener('load', function() {
+        setTimeout(updateNavigation, 300);
+    });
+
+    // Run immediately as well
+    setTimeout(updateNavigation, 100);
 
     // Fade in animation on scroll
     const observerOptions = {
@@ -168,24 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Scroll to top functionality
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollToTopBtn.className = 'fixed bottom-20 right-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 z-40 opacity-0 invisible';
-    scrollToTopBtn.id = 'scrollToTop';
-    document.body.appendChild(scrollToTopBtn);
-
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.classList.remove('opacity-0', 'invisible');
-        } else {
-            scrollToTopBtn.classList.add('opacity-0', 'invisible');
-        }
-    });
 });
 
 // WhatsApp link with pre-filled message

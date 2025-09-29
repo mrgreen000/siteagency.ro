@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prețuri - Digital Pro | Web Design & Marketing Digital România</title>
+    <meta name="description" content="Prețuri transparente pentru web design, SEO, magazine online și marketing digital. Pachete complete pentru afaceri românești. Fără costuri ascunse!">
+    <meta name="keywords" content="preturi web design romania, cost website romania, pret seo romania, tarife marketing digital">
+    <link rel="canonical" href="https://digitalpro.ro/preturi.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Flowbite Pro (Local) -->
+    <link rel="stylesheet" href="css/flowbite.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Sticky Header Container -->
+    <div class="header-container">
+        <!-- Urgent Offer Bar -->
+        <div class="offer-bar relative bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 text-white py-3 px-4 text-center overflow-hidden">
+            <div class="sparkle absolute inset-0"></div>
+            <div class="relative z-10">
+                <div class="font-bold text-sm md:text-base">
+                    <span class="inline">🔥 OFERTĂ: 50% REDUCERE!</span>
+                    <span class="hidden md:inline"> la primul website + SEO GRATUIT!</span>
+                    <span class="animate-pulse inline ml-2">⏰ 48 ore!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav shadow-lg" role="navigation" aria-label="Main navigation">
+        <div class="max-w-screen-xl mx-auto py-2 px-4">
+            <!-- Mobile Layout -->
+            <div class="flex items-center justify-between md:hidden">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
+                        <span class="text-white font-bold text-xl">DP</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-gradient leading-none">Digital Pro</span>
+                        <span class="text-xs text-gray-500 leading-none">Marketing Agency</span>
+                    </div>
+                </a>
+                <button data-collapse-toggle="mobile-menu" type="button" id="mobile-menu-button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Acasă</a>
+                    <a href="index.html#services" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Servicii</a>
+                    <a href="index.html#portfolio" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Portofoliu</a>
+                    <a href="index.html#pricing" class="nav-link active block px-3 py-2 text-pink-600 font-semibold">Prețuri</a>
+                    <a href="index.html#contact" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Contact</a>
+                </div>
+            </div>
+
+            <!-- Desktop Layout -->
+            <div class="hidden md:flex md:items-center md:justify-center w-full">
+                <!-- Logo - Left -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
+                                <span class="text-white font-bold text-xl">DP</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-2xl font-bold text-gradient leading-none">Digital Pro</span>
+                                <span class="text-xs text-gray-500 leading-none">Marketing Agency</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Menu - Center -->
+                <div class="flex-grow flex justify-center">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="nav-link text-gray-900 hover:text-pink-600 transition-colors">Acasă</a></li>
+                        <li><a href="index.html#services" class="nav-link text-gray-900 hover:text-pink-600 transition-colors">Servicii</a></li>
+                        <li><a href="index.html#portfolio" class="nav-link text-gray-900 hover:text-pink-600 transition-colors">Portofoliu</a></li>
+                        <li><a href="index.html#pricing" class="nav-link active text-pink-600 font-semibold transition-colors">Prețuri</a></li>
+                        <li><a href="index.html#contact" class="nav-link text-gray-900 hover:text-pink-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Button - Right -->
+                <div class="flex-shrink-0">
+                    <a href="index.html#contact" class="btn-primary text-white font-semibold text-sm px-6 py-3 text-center inline-block">
+                        Solicită Ofertă
+                    </a>
+                </div>
+            </div>
+        </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        <div class="max-w-screen-xl px-4 mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                <span class="text-gradient">Prețuri Transparente</span>
+            </h1>
+            <p class="text-xl mb-8 text-gray-300">Fără costuri ascunse. Rezultate garantate.</p>
+
+            <!-- Certifications -->
+            <div class="flex justify-center items-center space-x-6 mb-8">
+                <div class="text-center">
+                    <i class="fab fa-google text-3xl text-yellow-400 mb-2"></i>
+                    <p class="text-xs">Google Certified</p>
+                </div>
+                <div class="text-center">
+                    <i class="fab fa-facebook text-3xl text-blue-400 mb-2"></i>
+                    <p class="text-xs">Meta Certified</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-award text-3xl text-green-400 mb-2"></i>
+                    <p class="text-xs">5+ Ani Experiență</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-8">✅ Incluse în Toate Pachetele</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-4 border rounded-lg">
+                    <i class="fas fa-rocket text-pink-600 text-3xl mb-3"></i>
+                    <h3 class="font-semibold mb-2">SEO Optimizat</h3>
+                    <p class="text-sm text-gray-600">Google rankings din prima zi</p>
+                </div>
+                <div class="text-center p-4 border rounded-lg">
+                    <i class="fas fa-mobile-alt text-pink-600 text-3xl mb-3"></i>
+                    <h3 class="font-semibold mb-2">Mobile Friendly</h3>
+                    <p class="text-sm text-gray-600">Perfect pe toate device-urile</p>
+                </div>
+                <div class="text-center p-4 border rounded-lg">
+                    <i class="fas fa-shield-alt text-pink-600 text-3xl mb-3"></i>
+                    <h3 class="font-semibold mb-2">Securitate SSL</h3>
+                    <p class="text-sm text-gray-600">GDPR compliant, backup-uri</p>
+                </div>
+                <div class="text-center p-4 border rounded-lg">
+                    <i class="fas fa-headset text-pink-600 text-3xl mb-3"></i>
+                    <h3 class="font-semibold mb-2">Suport 48h</h3>
+                    <p class="text-sm text-gray-600">Răspuns rapid garantat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Packages Section -->
+    <section id="web-design" class="py-20 bg-gray-50">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">🌐 Web Design & Development</h2>
+                <p class="text-lg text-gray-600">Website-uri profesionale, optimizate pentru conversii</p>
+            </div>
+
+            <!-- Business Websites -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center mb-8">🌐 Site Prezentare</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="premium-card p-6 text-center flex flex-col">
+                        <i class="fas fa-home text-4xl text-pink-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2 text-center">Foundation</h4>
+                        <div class="text-3xl font-bold text-pink-600 mb-4">290€</div>
+                        <p class="text-gray-600 mb-6">1 pagină landing page</p>
+                        <ul class="text-left space-y-2 mb-6 flex-grow">
+                            <li>✅ Toate caracteristicile cheie</li>
+                            <li>✅ Formular de contact</li>
+                            <li>✅ CTA buttons optimizate</li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mb-4">Perfect pentru: Servicii profesionale, consultanți</p>
+                        <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block mt-auto rounded-lg">Comandă Acum</a>
+                    </div>
+
+                    <div class="premium-card p-6 text-center border-2 border-pink-600 flex flex-col relative overflow-visible">
+                        <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-1.5 rounded-full text-xs font-bold shadow-xl whitespace-nowrap flex items-center z-50 border-2 border-white">
+                            <span class="text-lg mr-1">⭐</span>
+                            <span class="uppercase tracking-wider">Popular</span>
+                            <span class="text-lg ml-1">⭐</span>
+                        </div>
+                        <i class="fas fa-briefcase text-4xl text-pink-600 mb-4 mt-2"></i>
+                        <h4 class="text-xl font-bold mb-2 text-center">Professional</h4>
+                        <div class="text-3xl font-bold text-pink-600 mb-4">440€</div>
+                        <p class="text-gray-600 mb-6">5-7 pagini</p>
+                        <ul class="text-left space-y-2 mb-6 flex-grow">
+                            <li>✅ Toate caracteristicile cheie</li>
+                            <li>✅ Multiple formulare</li>
+                            <li>✅ Integrări avansate</li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mb-4">Perfect pentru: Afaceri în creștere, agenții</p>
+                        <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block mt-auto rounded-lg">Comandă Acum</a>
+                    </div>
+
+                    <div class="premium-card p-6 text-center flex flex-col">
+                        <i class="fas fa-building text-4xl text-pink-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2 text-center">Executive</h4>
+                        <div class="text-3xl font-bold text-pink-600 mb-4">590€</div>
+                        <p class="text-gray-600 mb-6">10-15 pagini</p>
+                        <ul class="text-left space-y-2 mb-6 flex-grow">
+                            <li>✅ Toate + suport prioritar</li>
+                            <li>✅ Funcționalități avansate</li>
+                            <li>✅ Integrări personalizate</li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mb-4">Perfect pentru: Companii establecite, corporații</p>
+                        <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block mt-auto rounded-lg">Comandă Acum</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E-commerce -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-center mb-8">🛒 Magazine Online</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="premium-card p-6 text-center flex flex-col">
+                        <i class="fas fa-store text-4xl text-pink-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2 text-center">Commerce Starter</h4>
+                        <div class="text-3xl font-bold text-pink-600 mb-4">690€</div>
+                        <p class="text-gray-600 mb-6">Până la 20 produse</p>
+                        <ul class="text-left space-y-2 mb-6 flex-grow">
+                            <li>✅ Payment processing</li>
+                            <li>✅ SSL certificate</li>
+                            <li>✅ Gestiune produse</li>
+                            <li>✅ Tracking comenzi</li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mb-4">Perfect pentru: Testare produse, boutique-uri mici</p>
+                        <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block mt-auto rounded-lg">Comandă Acum</a>
+                    </div>
+
+                    <div class="premium-card p-6 text-center border-2 border-pink-600 flex flex-col relative overflow-visible">
+                        <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-1.5 rounded-full text-xs font-bold shadow-xl whitespace-nowrap flex items-center z-50 border-2 border-white">
+                            <span class="text-lg mr-1">⭐</span>
+                            <span class="uppercase tracking-wider">Recomandat</span>
+                            <span class="text-lg ml-1">⭐</span>
+                        </div>
+                        <i class="fas fa-shopping-cart text-4xl text-pink-600 mb-4 mt-2"></i>
+                        <h4 class="text-xl font-bold mb-2 text-center">Commerce Growth</h4>
+                        <div class="text-3xl font-bold text-pink-600 mb-4">790€</div>
+                        <p class="text-gray-600 mb-6">Până la 50 produse</p>
+                        <ul class="text-left space-y-2 mb-6 flex-grow">
+                            <li>✅ Tot din Starter</li>
+                            <li>✅ Multiple plăți</li>
+                            <li>✅ Gestiune stoc</li>
+                            <li>✅ Integrări curieri RO</li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mb-4">Perfect pentru: Magazine online în creștere</p>
+                        <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block mt-auto rounded-lg">Comandă Acum</a>
+                    </div>
+
+                    <div class="premium-card p-6 text-center flex flex-col">
+                        <i class="fas fa-rocket text-4xl text-pink-600 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2 text-center">Commerce Scale</h4>
+                        <div class="text-3xl font-bold text-pink-600 mb-4">890€</div>
+                        <p class="text-gray-600 mb-6">Până la 200 produse</p>
+                        <ul class="text-left space-y-2 mb-6 flex-grow">
+                            <li>✅ Tot din Growth</li>
+                            <li>✅ Multi-language</li>
+                            <li>✅ Integrări personalizate</li>
+                            <li>✅ Dashboard avansat</li>
+                        </ul>
+                        <p class="text-sm text-gray-500 mb-4">Perfect pentru: Business-uri e-commerce etablisate</p>
+                        <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block mt-auto rounded-lg">Comandă Acum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Services Section -->
+    <section id="seo" class="py-20 bg-white">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">🎯 SEO & Marketing Digital</h2>
+                <p class="text-lg text-gray-600">Managed by Google Analytics Certified Experts</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO Packages -->
+                <div class="premium-card p-6 text-center">
+                    <i class="fas fa-chart-line text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Growth SEO</h3>
+                    <div class="text-2xl font-bold text-pink-600 mb-4">290€/lună</div>
+                    <ul class="space-y-2 mb-6 text-left">
+                        <li>✅ Keyword research</li>
+                        <li>✅ On-page optimization</li>
+                        <li>✅ Content strategy</li>
+                        <li>✅ Monthly reports</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block text-center rounded-lg">Start SEO</a>
+                </div>
+
+                <div class="premium-card p-6 text-center">
+                    <i class="fas fa-rocket text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Performance SEO</h3>
+                    <div class="text-2xl font-bold text-pink-600 mb-4">390€/lună</div>
+                    <ul class="space-y-2 mb-6 text-left">
+                        <li>✅ Tot din Growth</li>
+                        <li>✅ Technical SEO</li>
+                        <li>✅ Link building</li>
+                        <li>✅ Competitor analysis</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block text-center rounded-lg">Start SEO</a>
+                </div>
+
+                <!-- Local SEO -->
+                <div class="premium-card p-6 text-center">
+                    <i class="fas fa-map-marker-alt text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Local SEO</h3>
+                    <div class="text-lg font-bold text-pink-600 mb-4">390€ setup sau 190€/lună</div>
+                    <ul class="space-y-2 mb-6 text-left">
+                        <li>✅ Google My Business</li>
+                        <li>✅ Local directories</li>
+                        <li>✅ Reviews management</li>
+                        <li>✅ Local citations</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block text-center rounded-lg">Start Local</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PPC Management Section -->
+    <section id="ads" class="py-20 bg-gray-50">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">📊 Managementul Campaniilor Publicitare</h2>
+                <p class="text-lg text-gray-600">Echipă certificată Google Partner</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="premium-card p-6 text-center">
+                    <i class="fab fa-google text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Google Ads</h3>
+                    <div class="text-lg font-bold text-pink-600 mb-2">15-20% din buget</div>
+                    <div class="text-sm text-gray-600 mb-4">(min. 250€) + 300-500€ setup</div>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li>✅ Search campaigns</li>
+                        <li>✅ Display networks</li>
+                        <li>✅ Shopping ads</li>
+                        <li>✅ Certified specialists</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block rounded-lg">Start Google Ads</a>
+                </div>
+
+                <div class="premium-card p-6 text-center">
+                    <i class="fab fa-facebook text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Facebook & Instagram</h3>
+                    <div class="text-lg font-bold text-pink-600 mb-2">15-20% din buget</div>
+                    <div class="text-sm text-gray-600 mb-4">(min. 250€) + 300-500€ setup</div>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li>✅ Audience targeting</li>
+                        <li>✅ Creative optimization</li>
+                        <li>✅ A/B testing</li>
+                        <li>✅ Blueprint certified</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block rounded-lg">Start Social Ads</a>
+                </div>
+
+                <div class="premium-card p-6 text-center">
+                    <i class="fab fa-tiktok text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">TikTok Ads</h3>
+                    <div class="text-lg font-bold text-pink-600 mb-2">15-20% din buget</div>
+                    <div class="text-sm text-gray-600 mb-4">(min. 250€) + 300-500€ setup</div>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li>✅ Video campaigns</li>
+                        <li>✅ Spark ads</li>
+                        <li>✅ Generation Z targeting</li>
+                        <li>✅ TikTok certified</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn-primary text-white px-6 py-3 inline-block rounded-lg">Start TikTok</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Deals Section -->
+    <section class="py-20 bg-gradient-to-br from-purple-900 to-pink-900 text-white">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">🎁 Pachetele Combo</h2>
+                <p class="text-lg opacity-90">Economisești până la 290€ cu pachetele combinate</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+                    <i class="fas fa-rocket text-4xl text-white mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Business Launcher</h3>
+                    <div class="text-2xl font-bold text-yellow-300 mb-2">890€</div>
+                    <div class="text-sm opacity-75 mb-4">(economii 140€)</div>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li>✅ Foundation site (1 pagină)</li>
+                        <li>✅ Logo profesional</li>
+                        <li>✅ 3 luni Local SEO</li>
+                        <li>✅ BONUS: Google My Business</li>
+                    </ul>
+                    <a href="index.html#contact" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold inline-block">Alege Pachetul</a>
+                </div>
+
+                <div class="bg-white/20 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-yellow-400 relative overflow-visible">
+                    <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-5 py-1.5 rounded-full text-xs font-bold shadow-xl whitespace-nowrap flex items-center z-10 border-2 border-white">
+                        <span class="text-lg mr-1">⭐</span>
+                        <span class="uppercase tracking-wider">Cel Mai Popular</span>
+                        <span class="text-lg ml-1">⭐</span>
+                    </div>
+                    <i class="fas fa-chart-line text-4xl text-white mb-4 mt-2"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Growth Accelerator</h3>
+                    <div class="text-2xl font-bold text-yellow-300 mb-2">1.590€</div>
+                    <div class="text-sm opacity-75 mb-4">(economii 240€)</div>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li>✅ Professional site (5-7 pagini)</li>
+                        <li>✅ Branding complet</li>
+                        <li>✅ 6 luni Growth SEO</li>
+                        <li>✅ BONUS: Analytics & training</li>
+                    </ul>
+                    <a href="index.html#contact" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold inline-block">Alege Pachetul</a>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+                    <i class="fas fa-bullseye text-4xl text-white mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4 text-center">Market Expansion</h3>
+                    <div class="text-2xl font-bold text-yellow-300 mb-2">1.790€</div>
+                    <div class="text-sm opacity-75 mb-4">(economii 290€)</div>
+                    <ul class="text-left space-y-2 mb-6">
+                        <li>✅ Commerce Growth (50 produse)</li>
+                        <li>✅ Branding complet</li>
+                        <li>✅ 3 luni Performance SEO</li>
+                        <li>✅ BONUS: Consultanță marketing</li>
+                    </ul>
+                    <a href="index.html#contact" class="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold inline-block">Alege Pachetul</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">🚀 De Ce o Echipă Certificată?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-certificate text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="font-bold mb-2">Expertiză Dovedită</h3>
+                    <p class="text-gray-600">Nu suntem "experți" auto-proclamați</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-headset text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="font-bold mb-2">Suport Google</h3>
+                    <p class="text-gray-600">Linie directă cu Google pentru probleme</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-chart-line text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="font-bold mb-2">Rezultate Mai Bune</h3>
+                    <p class="text-gray-600">Cu 40% mai bun ROI față de agenții necertificate</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-shield-check text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="font-bold mb-2">Încredere</h3>
+                    <p class="text-gray-600">Skills verificate pe care te poți baza</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-pink-600 to-purple-600 text-white text-center">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Gata să Îți Transformi Afacerea?</h2>
+            <p class="text-xl mb-8">Consultația gratuită durează doar 15 minute</p>
+            <a href="index.html#contact" class="bg-white text-pink-600 px-8 py-4 rounded-lg font-bold text-lg inline-block hover:bg-gray-100 transition-colors">
+                🚀 Solicită Consultația Gratuită
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Digital Pro. Toate drepturile rezervate.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-amber-400 transition-colors">Politica de confidențialitate</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Termeni și condiții</a>
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="index.html" class="text-white hover:text-amber-400 transition-colors">
+                        Acasă
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flowbite Pro JS (Local) -->
+    <script src="js/flowbite.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
