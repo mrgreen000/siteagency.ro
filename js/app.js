@@ -40,9 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     console.log('Menu clicked:', href, '- Active class added');
                 }
 
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                // Calculate offset for sticky header (offer bar + nav = ~112px)
+                const headerOffset = 112;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
@@ -222,5 +227,33 @@ if (typeof window !== 'undefined') {
     window.resetCookieConsent = function() {
         localStorage.removeItem('cookies-accepted');
         location.reload();
+    };
+
+    // FAQ Toggle Function
+    window.toggleFAQ = function(button) {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector('i');
+
+        // Close all other FAQs
+        document.querySelectorAll('.faq-answer').forEach(item => {
+            if (item !== answer) {
+                item.classList.add('hidden');
+            }
+        });
+
+        document.querySelectorAll('.faq-question i').forEach(item => {
+            if (item !== icon) {
+                item.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        // Toggle current FAQ
+        answer.classList.toggle('hidden');
+
+        if (answer.classList.contains('hidden')) {
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            icon.style.transform = 'rotate(180deg)';
+        }
     };
 }
