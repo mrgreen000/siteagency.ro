@@ -41,18 +41,18 @@ const {
     <meta name="geo.placename" content="București, România">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`}>
-    <link rel="shortcut icon" href={`${import.meta.env.BASE_URL}/favicon.svg`}>
-    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}/favicon.svg`}>
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`}>
+    <link rel="shortcut icon" href={`${import.meta.env.BASE_URL}favicon.svg`}>
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}favicon.svg`}>
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Flowbite Pro (Local) - after Tailwind -->
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}/css/flowbite.css`}>
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/flowbite.css`}>
 
     <!-- Custom CSS - loaded last to override -->
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}/css/custom.css`}>
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/custom.css`}>
 </head>
 <body class="bg-gray-50">
 
@@ -75,7 +75,7 @@ const {
         <div class="max-w-screen-xl mx-auto py-2 px-4">
             <!-- Mobile Layout -->
             <div class="flex items-center justify-between md:hidden">
-                <a href="/" class="flex items-center space-x-2">
+                <a href={import.meta.env.BASE_URL} class="flex items-center space-x-2">
                     <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
                         <span class="text-white font-bold text-xl">DP</span>
                     </div>
@@ -95,12 +95,12 @@ const {
             <!-- Mobile Menu -->
             <div class="hidden md:hidden" id="mobile-menu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="/#home" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Acasă</a>
-                    <a href="/#services" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Servicii</a>
-                    <a href="/#portfolio" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Portofoliu</a>
-                    <a href="/#faq" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">FAQ</a>
-                    <a href="/preturi" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Prețuri</a>
-                    <a href="/#contact" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Contact</a>
+                    <a href={`${import.meta.env.BASE_URL}#home`} class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Acasă</a>
+                    <a href={`${import.meta.env.BASE_URL}#services`} class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Servicii</a>
+                    <a href={`${import.meta.env.BASE_URL}#portfolio`} class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Portofoliu</a>
+                    <a href={`${import.meta.env.BASE_URL}#faq`} class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">FAQ</a>
+                    <a href={`${import.meta.env.BASE_URL}preturi`} class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Prețuri</a>
+                    <a href={`${import.meta.env.BASE_URL}#contact`} class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Contact</a>
                 </div>
             </div>
 
@@ -108,7 +108,7 @@ const {
             <div class="hidden md:flex md:items-center md:justify-center w-full">
                 <!-- Logo - Left -->
                 <div class="flex-shrink-0">
-                    <a href="/" class="flex items-center space-x-3">
+                    <a href={import.meta.env.BASE_URL} class="flex items-center space-x-3">
                         <div class="flex items-center space-x-2">
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
                                 <span class="text-white font-bold text-xl">DP</span>
@@ -124,18 +124,18 @@ const {
                 <!-- Navigation Links - Center -->
                 <div class="flex-grow flex items-center justify-center">
                     <div class="flex items-center space-x-6">
-                        <a href="/#home" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="home">Acasă</a>
-                        <a href="/#services" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="services">Servicii</a>
-                        <a href="/#portfolio" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="portfolio">Portofoliu</a>
-                        <a href="/#faq" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="faq">FAQ</a>
-                        <a href="/preturi" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors">Prețuri</a>
-                        <a href="/#contact" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="contact">Contact</a>
+                        <a href={`${import.meta.env.BASE_URL}#home`} class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="home">Acasă</a>
+                        <a href={`${import.meta.env.BASE_URL}#services`} class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="services">Servicii</a>
+                        <a href={`${import.meta.env.BASE_URL}#portfolio`} class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="portfolio">Portofoliu</a>
+                        <a href={`${import.meta.env.BASE_URL}#faq`} class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="faq">FAQ</a>
+                        <a href={`${import.meta.env.BASE_URL}preturi`} class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors">Prețuri</a>
+                        <a href={`${import.meta.env.BASE_URL}#contact`} class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="contact">Contact</a>
                     </div>
                 </div>
 
                 <!-- CTA Button - Right -->
                 <div class="flex-shrink-0">
-                    <a href="/#contact" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <a href={`${import.meta.env.BASE_URL}#contact`} class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                         Consultanță Gratuită
                     </a>
                 </div>
@@ -218,9 +218,9 @@ const {
             }
         }, true);
     </script>
-    <script is:inline src={`${import.meta.env.BASE_URL}/js/flowbite.js`}></script>
+    <script is:inline src={`${import.meta.env.BASE_URL}js/flowbite.js`}></script>
 
     <!-- Custom App JS -->
-    <script is:inline src={`${import.meta.env.BASE_URL}/js/app.js`}></script>
+    <script is:inline src={`${import.meta.env.BASE_URL}js/app.js`}></script>
 </body>
 </html>
