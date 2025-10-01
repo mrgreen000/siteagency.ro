@@ -41,18 +41,18 @@ const {
     <meta name="geo.placename" content="București, România">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.svg">
-    <link rel="apple-touch-icon" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`}>
+    <link rel="shortcut icon" href={`${import.meta.env.BASE_URL}favicon.svg`}>
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}favicon.svg`}>
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Flowbite Pro (Local) - after Tailwind -->
-    <link rel="stylesheet" href="/css/flowbite.css">
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/flowbite.css`}>
 
     <!-- Custom CSS - loaded last to override -->
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}css/custom.css`}>
 </head>
 <body class="bg-gray-50">
 
@@ -218,9 +218,9 @@ const {
             }
         }, true);
     </script>
-    <script is:inline src="/js/flowbite.js"></script>
+    <script is:inline src={`${import.meta.env.BASE_URL}js/flowbite.js`}></script>
 
     <!-- Custom App JS -->
-    <script is:inline src="/js/app.js"></script>
+    <script is:inline src={`${import.meta.env.BASE_URL}js/app.js`}></script>
 </body>
 </html>
