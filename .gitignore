@@ -31,6 +31,7 @@ vendor/
 # Build Files
 dist/
 build/
+.astro/
 *.log
 npm-debug.log*
 yarn-debug.log*
