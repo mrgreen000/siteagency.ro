@@ -1,0 +1,115 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+---
+
+<BaseLayout
+  title={article.data.title}
+  description={article.data.description}
+  keywords={article.data.keywords.join(', ')}
+>
+  <main class="pt-32 pb-16 px-4">
+    <article class="max-w-4xl mx-auto">
+      <!-- Hero Section -->
+      <div class="mb-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">
+          {article.data.hero.title}
+        </h1>
+        <p class="text-xl text-gray-600 mb-6">
+          {article.data.hero.subtitle}
+        </p>
+        <a
+          href={`${import.meta.env.BASE_URL}#contact`}
+          class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          {article.data.hero.cta_text}
+        </a>
+      </div>
+
+      <!-- Case Studies (if available) -->
+      {article.data.case_studies && article.data.case_studies.length > 0 && (
+        <div class="mb-12 bg-gray-50 p-6 rounded-lg">
+          <h2 class="text-2xl font-bold mb-4">Rezultate Reale</h2>
+          <div class="grid md:grid-cols-3 gap-4">
+            {article.data.case_studies.map((study) => (
+              <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-bold text-lg mb-2">{study.business}</h3>
+                <p class="text-sm text-gray-600 mb-2">{study.niche}</p>
+                <p class="text-purple-600 font-semibold">{study.result}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Article Content -->
+      <div class="prose prose-lg max-w-none">
+        <Content />
+      </div>
+
+      <!-- CTA Footer -->
+      <div class="mt-12 text-center bg-gradient-to-r from-purple-600 to-pink-600 text-white p-8 rounded-lg">
+        <h2 class="text-3xl font-bold mb-4">Pregatit Sa Incepi?</h2>
+        <p class="text-xl mb-6">Contacteaza-ne astazi pentru o consultatie gratuita</p>
+        <a
+          href={`${import.meta.env.BASE_URL}#contact`}
+          class="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          {article.data.hero.cta_text}
+        </a>
+      </div>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  .prose {
+    color: #374151;
+  }
+
+  .prose h2 {
+    color: #1f2937;
+    font-weight: 700;
+    font-size: 1.875rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose h3 {
+    color: #374151;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+
+  .prose strong {
+    color: #1f2937;
+    font-weight: 600;
+  }
+
+  .prose ul, .prose ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+</style>
