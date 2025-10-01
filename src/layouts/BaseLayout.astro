@@ -1,0 +1,226 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title,
+  description,
+  keywords = "web design romania, seo saloane frumusete, marketing digital clinici medicale, website salon, site clinica, bucuresti",
+  ogImage = "https://digitalpro.ro/assets/images/og-image.jpg",
+  canonicalUrl = "https://digitalpro.ro"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content={keywords}>
+    <meta name="author" content="Digital Pro">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={canonicalUrl}>
+    <meta property="og:image" content={ogImage}>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <link rel="canonical" href={canonicalUrl}>
+    <meta name="geo.region" content="RO">
+    <meta name="geo.placename" content="București, România">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/favicon.svg">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Flowbite Pro (Local) - after Tailwind -->
+    <link rel="stylesheet" href="/css/flowbite.css">
+
+    <!-- Custom CSS - loaded last to override -->
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Sticky Header Container -->
+    <div class="header-container">
+        <!-- Urgent Offer Bar -->
+        <div class="offer-bar relative bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 text-white py-3 px-4 text-center overflow-hidden">
+            <div class="sparkle absolute inset-0"></div>
+            <div class="relative z-10">
+                <div class="font-bold text-sm md:text-base">
+                    <span class="inline">🔥 OFERTĂ: 50% REDUCERE!</span>
+                    <span class="hidden md:inline"> la primul website + SEO GRATUIT!</span>
+                    <span class="animate-pulse inline ml-2">⏰ 48 ore!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav shadow-lg" role="navigation" aria-label="Main navigation">
+        <div class="max-w-screen-xl mx-auto py-2 px-4">
+            <!-- Mobile Layout -->
+            <div class="flex items-center justify-between md:hidden">
+                <a href="/" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
+                        <span class="text-white font-bold text-xl">DP</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-gradient leading-none">Digital Pro</span>
+                        <span class="text-xs text-gray-500 leading-none">Marketing Agency</span>
+                    </div>
+                </a>
+                <button data-collapse-toggle="mobile-menu" type="button" id="mobile-menu-button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="/#home" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Acasă</a>
+                    <a href="/#services" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Servicii</a>
+                    <a href="/#portfolio" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Portofoliu</a>
+                    <a href="/#faq" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">FAQ</a>
+                    <a href="/preturi" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Prețuri</a>
+                    <a href="/#contact" class="nav-link block px-3 py-2 text-gray-900 hover:text-pink-600">Contact</a>
+                </div>
+            </div>
+
+            <!-- Desktop Layout -->
+            <div class="hidden md:flex md:items-center md:justify-center w-full">
+                <!-- Logo - Left -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center space-x-3">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: var(--gradient-1);">
+                                <span class="text-white font-bold text-xl">DP</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-2xl font-bold text-gradient leading-none">Digital Pro</span>
+                                <span class="text-xs text-gray-500 leading-none">Marketing Agency</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Links - Center -->
+                <div class="flex-grow flex items-center justify-center">
+                    <div class="flex items-center space-x-6">
+                        <a href="/#home" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="home">Acasă</a>
+                        <a href="/#services" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="services">Servicii</a>
+                        <a href="/#portfolio" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="portfolio">Portofoliu</a>
+                        <a href="/#faq" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="faq">FAQ</a>
+                        <a href="/preturi" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors">Prețuri</a>
+                        <a href="/#contact" class="nav-link text-gray-900 hover:text-pink-600 font-medium transition-colors" data-target="contact">Contact</a>
+                    </div>
+                </div>
+
+                <!-- CTA Button - Right -->
+                <div class="flex-shrink-0">
+                    <a href="/#contact" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Consultanță Gratuită
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+
+    <!-- Main Content -->
+    <slot />
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Digital Pro. Toate drepturile rezervate.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-amber-400 transition-colors">Politica de confidențialitate</a>
+                    <a href="#" class="hover:text-amber-400 transition-colors">Termeni și condiții</a>
+                </div>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-white hover:text-amber-400 transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-400 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-amber-400 transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Policy Bar -->
+    <div id="cookie-bar" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white py-3 px-4 shadow-2xl z-50 transition-transform duration-300 transform translate-y-0">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="flex items-center justify-between gap-4">
+                <div class="flex items-center gap-3 flex-1">
+                    <i class="fas fa-cookie-bite text-xl text-yellow-400 flex-shrink-0"></i>
+                    <p class="text-sm">
+                        Folosim cookie-uri pentru a îmbunătăți experiența ta.
+                        <a href="#" class="text-yellow-400 hover:underline">Mai multe detalii</a>
+                    </p>
+                </div>
+                <div class="flex gap-2 flex-shrink-0">
+                    <button id="accept-cookies" class="bg-yellow-400 text-gray-900 px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-yellow-500 transition-colors whitespace-nowrap">
+                        Accept toate
+                    </button>
+                    <button id="reject-cookies" class="bg-gray-700 text-white px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-gray-600 transition-colors whitespace-nowrap">
+                        Esențiale
+                    </button>
+                    <button onclick="document.getElementById('cookie-bar').style.display='none'" class="text-gray-400 hover:text-white transition-colors ml-1">
+                        <i class="fas fa-times text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden dummy elements for Flowbite compatibility -->
+    <div id="themeToggleDarkIcon" class="hidden" style="display: none !important;"></div>
+    <div id="themeToggleLightIcon" class="hidden" style="display: none !important;"></div>
+    <button id="themeToggle" style="display: none !important;"></button>
+
+    <!-- Flowbite Pro JS (Local) with error handling -->
+    <script is:inline>
+        // Suppress Flowbite errors for missing elements
+        window.addEventListener('error', function(e) {
+            if (e.message && (
+                e.message.includes('null is not an object') ||
+                e.message.includes('Cannot read property') ||
+                e.message.includes('navbar')
+            )) {
+                e.preventDefault();
+                return true;
+            }
+        }, true);
+    </script>
+    <script is:inline src="/js/flowbite.js"></script>
+
+    <!-- Custom App JS -->
+    <script is:inline src="/js/app.js"></script>
+</body>
+</html>

@@ -4,12 +4,17 @@
   "description": "Professional agency website for web design, SEO, and digital marketing services",
   "main": "index.html",
   "scripts": {
-    "dev": "vite --port 5177",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "astro dev --port 5177",
+    "build": "astro build",
+    "preview": "astro preview",
+    "dev:vite": "vite --port 5177",
+    "build:vite": "vite build"
   },
   "devDependencies": {
-    "tailwindcss": "^4.1.13",
+    "@tailwindcss/forms": "^0.5.10",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "vite": "^5.0.0"
   },
   "keywords": [
@@ -21,6 +26,7 @@
   "author": "Digital Pro",
   "license": "MIT",
   "dependencies": {
+    "astro": "^5.14.1",
     "playwright": "^1.55.1"
   }
 }

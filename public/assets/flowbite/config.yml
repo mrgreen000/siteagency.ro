@@ -1,0 +1,32 @@
+languageCode:           "en"
+title:                  "Flowbite Marketing UI"
+# baseURL:                "http://localhost:1313"
+# baseURL:                "http://192.168.80.201:1313"
+baseURL:                "https://flowbite.com/marketing-ui/demo"
+enableInlineShortcodes: true
+canonifyURLs: true
+
+params:
+  homepage: "https://flowbite.com"
+  authors: Flowbite
+  social_image_path: /marketing-ui/demo/images/og-image.jpg
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+    style:              colorful
+  tableOfContents:
+    startLevel:         2
+    endLevel:           6
+
+buildDrafts:            true
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "RSS"]
+
+publishDir:             "_gh_pages"
