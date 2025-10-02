@@ -221,4 +221,4 @@ Urmareste apeluri, mesaje, formulare si rezervari. Configureaza obiective si rap
 
 Cand tratezi profesionist **creare site Ploiesti**, obtii mai multa vizibilitate, mai multe apeluri si programari previzibile. Construieste pe o arhitectura simpla, scrie pentru oameni, ruleaza SEO local si masoara constant. Daca vrei un plan aplicat pe nisa ta, programeaza o discutie si pornim la drum.
 
-**Call to action:** Programeaza o consultanta gratuita pentru creare site Ploiesti si vezi ce putem livra in primele 30 de zile.
+Programeaza o consultanta gratuita pentru creare site Ploiesti si vezi ce putem livra in primele 30 de zile.
