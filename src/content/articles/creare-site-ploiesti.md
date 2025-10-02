@@ -326,7 +326,7 @@ Nu. Lucram cu afaceri din toata Romania, dar ne specializam in SEO local pentru 
 
 Nu oferim plata în rate direct, însă puteți achita cu un card de credit care permite plata în rate fără dobândă, în funcție de banca emitentă. În acest fel beneficiați de flexibilitate, iar noi vă putem emite factura integral la momentul livrării.
 
-## Concluzie: ia decizia corecta pentru afacerea ta din Ploiesti
+## Ia decizia corecta pentru afacerea ta din Ploiesti!
 
 Daca ai citit pana aici, inseamna ca esti serios in privinta dezvoltarii afacerii tale online. Perfect.
 
