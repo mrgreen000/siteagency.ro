@@ -7,7 +7,7 @@ const allArticles = await getCollection('articles');
 const featuredArticles = allArticles
   .filter(article => article.data.featured)
   .sort((a, b) => b.data.published_date.getTime() - a.data.published_date.getTime())
-  .slice(0, 2);
+  .slice(0, 4);
 ---
 
 <BaseLayout

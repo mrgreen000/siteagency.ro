@@ -52,10 +52,12 @@ featured: true
 - Scrie **fără diacritice** (doar litere latine standard).  
 - Adaugă **exemple, statistici, comparații și sfaturi practice** pentru a transmite expertiză și încredere.  
 - Optimizează fiecare secțiune pentru **intenția de căutare** a utilizatorilor.  
-- Încheie cu o concluzie și un **call-to-action** (programare, contact, ofertă).  
+- Încheie cu o concluzie și un **call-to-action** (programare, contact, ofertă).
+- adauga 2-3 poze emblematice de pe web, cu numele fiind keyword_name_number.jpg si includele prin text intr-un mod frumos. salveaza imaginile generate in src/assets/
 - Structura finală obligatorie:  
   - Meta title  
   - Meta description  
   - H1  
   - H2/H3  
   - Paragrafe bine organizate  
+- salveaza articolul generat in src/content/articles/ cu numele: keywords.md
