@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "astro dev --port 5177",
-    "build": "BASE_URL=/ astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "dev:vite": "vite --port 5177",
     "build:vite": "vite build"
