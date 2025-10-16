@@ -5,6 +5,7 @@ type: "city"
 city: "Ploiesti"
 region: "Prahova"
 keywords: ["creare site Ploiesti","creare site web Ploiesti","web design Ploiesti","agentie web Ploiesti","SEO local Ploiesti","site prezentare Ploiesti","magazin online Ploiesti"]
+image: ../../assets/creare_site_ploiesti_web_design.png
 hero:
   title: "Creare site Ploiesti"
   subtitle: "Site rapid, optimizat si orientat pe lead-uri. Pozitii solide in Google Maps si rezultate masurabile."
@@ -26,7 +27,7 @@ featured: true
 # Creare site Ploiesti: ghid complet pentru afaceri locale care vor rezultate
 
 Creare site Ploiesti este calea directa catre mai multi clienti, mai multe apeluri si programari mai rapide. Fie că ai un salon, o clinica, un service auto sau un cabinet, **creare site Ploiesti** te ajuta sa apari exact cand oamenii cauta si sa transformi vizitele in rezervari. In randurile de mai jos gasesti o strategie pragmatica, testata pe businessuri locale, care pune focus pe conversii, nu doar pe poze frumoase.
-
+![Creare site Ploiesti web Design](../../assets/creare_site_ploiesti_web_design.png)
 ## Creare site Ploiesti: de ce conteaza pentru lead-uri reale
 
 Publicul local nu are timp de pierdut. Cauta rapid, compara doua-trei optiuni si actioneaza in cateva minute. Un proiect de **creare site Ploiesti** bine facut inseamna incarcare rapida, informatii clare, butoane vizibile si un mesaj care vorbeste pe limba clientilor din oras. Cand bifezi aceste criterii, sansele de a primi apeluri si formulare cresc semnificativ.

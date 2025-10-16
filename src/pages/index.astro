@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 // Get all articles and sort by featured and date
 const allArticles = await getCollection('articles');
@@ -11,9 +12,9 @@ const featuredArticles = allArticles
 ---
 
 <BaseLayout
-  title="Digital Pro - Web Design & Marketing Digital pentru Saloane și Clinici | Romania"
+  title="SiteAgency.ro - Web Design & Marketing Digital pentru Saloane și Clinici | Romania"
   description="Website-uri profesionale, SEO și marketing digital pentru saloane de frumusețe, clinici medicale și afaceri locale în România. Prețuri transparente, rezultate măsurabile."
-  keywords="web design romania, seo saloane frumusete, marketing digital clinici medicale, website salon, site clinica, bucuresti"
+  keywords="web design ploiesti, creare site ploiesti, seo ploiesti, web design romania, seo saloane frumusete, marketing digital clinici medicale, website salon, site clinica, agentie web ploiesti, seo local ploiesti"
 >
 
     <!-- Hero Section -->
@@ -22,22 +23,22 @@ const featuredArticles = allArticles
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid lg:grid-cols-12">
             <div class="mr-auto place-self-center lg:col-span-7 animate-fade-in-left">
                 <h1 id="hero-heading" class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl">
-                    <span class="text-gradient">Creare Site Web + Local SEO</span>
+                    <span class="text-gradient">Creare Site Web + SEO</span>
                 </h1>
                 <p class="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-200">
-                    <strong class="text-yellow-300">+300% Clienți Noi În 60 de Zile Garantat!</strong><br>
-                    Site-uri profesionale pentru saloane de frumusețe și clinici medicale + SEO local pentru vizibilitate maximă în orașul tău.
+                    <strong class="text-yellow-300">+300% Mai Mulți Clienți În Doar 60 De Zile — Garantat!</strong><br>
+                    Site-uri profesionale pentru saloane, clinici și alte afaceri locale — cu optimizare SEO pentru vizibilitate maximă în orașul tău.
                 </p>
 
                 <!-- Micro-proof bar -->
                 <div class="flex flex-wrap items-center gap-4 md:gap-6 mb-6 text-sm">
                     <div class="flex items-center gap-2">
-                        <i class="fas fa-check-circle text-green-400"></i>
-                        <span class="text-white"><strong>150+ afaceri</strong> locale</span>
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        <span class="text-white">Peste <strong>150 de afaceri</strong> locale</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <i class="fas fa-clock text-blue-400"></i>
-                        <span class="text-white"><strong>48h</strong> start livrare</span>
+                        <span class="text-white">Livrarea începe în <strong>48h</strong> de ore</span>
                     </div>
                     <div class="flex items-center gap-2">
                         <i class="fas fa-star text-yellow-400"></i>
@@ -47,9 +48,9 @@ const featuredArticles = allArticles
 
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#contact" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-center text-white">
-                        Solicită Consultanță Gratuită
+                        Programează un apel gratuit
                     </a>
-                    <a href="https://wa.me/40721234567" target="_blank" class="btn-secondary inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-center text-white">
+                    <a href="https://wa.me/40721633336" target="_blank" class="btn-secondary inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-center text-white">
                         <i class="fab fa-whatsapp mr-2"></i> WhatsApp
                     </a>
                 </div>
@@ -62,10 +63,100 @@ const featuredArticles = allArticles
                 </p>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex animate-fade-in-right">
-                <div class="w-full h-96 premium-card rounded-3xl flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-600/20"></div>
-                    <i class="fas fa-laptop-code text-8xl text-white/90 relative z-10 animate-scale-in"></i>
-                    <div class="absolute bottom-4 left-4 text-xs text-white/60">Live Preview</div>
+                <div class="w-full premium-card rounded-3xl relative overflow-hidden bg-white p-4">
+                    <!-- Success Badge -->
+                    <div class="absolute top-4 right-4 z-20">
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                            <i class="fas fa-trophy text-sm"></i>
+                            <span class="font-bold text-xs">REZULTAT REAL</span>
+                        </div>
+                    </div>
+
+                    <!-- Google Search Mockup -->
+                    <div class="relative">
+                        <!-- Google Logo & Search Bar -->
+                        <div class="mb-3">
+                            <div class="text-2xl font-bold text-gray-700 mb-2">
+                                <span class="text-blue-500">G</span><span class="text-red-500">o</span><span class="text-yellow-500">o</span><span class="text-blue-500">g</span><span class="text-green-500">l</span><span class="text-red-500">e</span>
+                            </div>
+                            <div class="bg-gray-100 rounded-full px-4 py-2 flex items-center gap-2 border border-gray-300">
+                                <i class="fas fa-search text-gray-400 text-sm"></i>
+                                <span class="text-sm text-gray-700">micropigmentare ploiesti</span>
+                            </div>
+                        </div>
+
+                        <!-- Search Results Count -->
+                        <div class="text-sm text-gray-500 mb-3">Aproximativ 8.420 rezultate</div>
+
+                        <!-- Result #1 - Client Site -->
+                        <div class="flex items-start gap-2 mb-2">
+                            <div class="flex-grow bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-300 rounded-lg p-3 hover:border-green-400 transition-colors">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <i class="fas fa-globe text-green-600 text-sm"></i>
+                                    <div class="text-sm text-gray-600">www.micropigmentaresprancene.ro</div>
+                                    <div class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded text-xs font-bold">LIVE</div>
+                                </div>
+                                <h3 class="text-blue-700 hover:underline font-medium text-base mb-1 cursor-pointer">
+                                    Micropigmentare Ploiești - Salon Autorizat
+                                </h3>
+                                <p class="text-sm text-gray-600 line-clamp-2">
+                                    Micropigmentare în Ploiești. Rezultate naturale, durabile. Specialist certificat...
+                                </p>
+                            </div>
+
+                            <!-- #1 Badge -->
+                            <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                                <span class="text-white font-black text-base">#1</span>
+                            </div>
+                        </div>
+
+                        <!-- Result #2 - Competitor (faded) -->
+                        <div class="bg-gray-50 rounded-lg p-2 mb-2 opacity-40">
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <i class="fas fa-globe text-gray-400 text-sm"></i>
+                                <div class="text-sm text-gray-500">www.altcompetitor.ro</div>
+                            </div>
+                            <h3 class="text-blue-600 text-sm mb-0.5">
+                                Alt Salon Micropigmentare...
+                            </h3>
+                            <p class="text-sm text-gray-500">Salon de micropigmentare...</p>
+                        </div>
+
+                        <!-- Result #3 - Competitor (faded) -->
+                        <div class="bg-gray-50 rounded-lg p-2 opacity-40">
+                            <div class="flex items-center gap-2 mb-0.5">
+                                <i class="fas fa-globe text-gray-400 text-sm"></i>
+                                <div class="text-sm text-gray-500">www.competitor2.ro</div>
+                            </div>
+                            <h3 class="text-blue-600 text-sm mb-0.5">
+                                Micropigmentare Ploiești...
+                            </h3>
+                            <p class="text-sm text-gray-500">Oferim servicii de...</p>
+                        </div>
+
+                        <!-- Stats Footer - Enhanced -->
+                        <div class="mt-3 pt-2 border-t border-gray-200">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg p-3 shadow-md">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <i class="fas fa-chart-line text-white text-sm"></i>
+                                        <p class="text-white/90 text-sm font-semibold">Trafic</p>
+                                    </div>
+                                    <p class="text-white text-2xl font-black leading-none">+400%</p>
+                                    <p class="text-white/80 text-sm mt-1">în 3 luni</p>
+                                </div>
+
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg p-3 shadow-md">
+                                    <div class="flex items-center gap-2 mb-1">
+                                        <i class="fas fa-calendar-check text-white text-sm"></i>
+                                        <p class="text-white/90 text-sm font-semibold">Programări</p>
+                                    </div>
+                                    <p class="text-white text-2xl font-black leading-none">+250%</p>
+                                    <p class="text-white/80 text-sm mt-1">per lună</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,7 +196,7 @@ const featuredArticles = allArticles
                     <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6" style="background: var(--gradient-3);">
                         <i class="fas fa-ad text-white text-2xl animate-scale-in"></i>
                     </div>
-                    <h3 class="mb-2 text-xl font-bold text-gray-900">Campanii Google Ads</h3>
+                    <h3 class="mb-2 text-xl font-bold text-gray-900">Campanii Reclame</h3>
                     <p class="text-gray-600 mb-4">Clienți noi, targetați precis. Plătești doar pentru rezultate reale</p>
                     <a href="#contact" class="text-gradient hover:opacity-80 font-semibold transition-opacity">Solicită Consultanță →</a>
                 </div>
@@ -128,7 +219,7 @@ const featuredArticles = allArticles
         <div class="max-w-screen-xl px-4 mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4"><span class="text-gradient">Cum Funcționează?</span></h2>
-                <p class="text-xl text-gray-600">4 pași simpli către succesul online</p>
+                <p class="text-xl text-gray-600">Doar 4 pași simpli până la succesul online</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -141,9 +232,9 @@ const featuredArticles = allArticles
                                 <i class="fas fa-check text-white text-sm"></i>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Consultație Gratuită</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Consultanță Gratuită</h3>
                         <p class="text-gray-600">Discutăm despre afacerea ta, obiective și nevoile tale specifice. Fără obligații!</p>
-                        <div class="mt-4 text-sm text-purple-600 font-semibold">📅 Ziua 0: Consultație + Audit</div>
+                        <div class="mt-4 text-sm text-purple-600 font-semibold">📅 Ziua 0: Consultanță + Audit</div>
                     </div>
                     <!-- Arrow for desktop -->
                     <div class="hidden lg:block absolute top-24 -right-8 text-pink-400 text-4xl z-10">
@@ -199,7 +290,7 @@ const featuredArticles = allArticles
             <!-- CTA -->
             <div class="text-center mt-12">
                 <a href="#contact" class="btn-primary text-white font-bold text-lg px-10 py-4 inline-block">
-                    🚀 Începe Acum - Consultație Gratuită!
+                    🚀 Începe Acum - Consultanță Gratuită!
                 </a>
                 <p class="mt-4 text-sm text-gray-600">
                     <i class="fas fa-shield-alt text-green-600 mr-1"></i>
@@ -222,85 +313,135 @@ const featuredArticles = allArticles
                 <p class="text-lg text-gray-600">Proiecte realizate pentru clienții noștri</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Portfolio items -->
-                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative">
-                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <i class="fas fa-utensils text-6xl text-white/90 relative z-10"></i>
-                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">LIVE</div>
-                    </div>
-                    <div class="p-4">
-                        <span class="text-xs text-amber-600 font-semibold">RESTAURANT</span>
-                        <h3 class="text-lg font-bold text-gray-900 mt-1">Restaurant Traditional</h3>
-                        <p class="text-sm text-gray-600 mt-2">Website modern cu sistem de rezervări online</p>
-                    </div>
-                </div>
+                <!-- Real Client - Micropigmentare Sprancene -->
+                <a href="https://www.micropigmentaresprancene.ro" target="_blank" rel="noopener noreferrer nofollow" class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative group">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="/micropigmentaresprancene.ro.png" alt="Micropigmentare Sprancene Ploiești" class="w-full h-full object-cover object-top" />
+                        <!-- Dark overlay for better badge visibility -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 group-hover:from-black/30 group-hover:via-black/20 group-hover:to-black/40 transition-all duration-300"></div>
 
-                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative">
-                    <div class="h-48 bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <i class="fas fa-cut text-6xl text-white/90 relative z-10"></i>
-                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">LIVE</div>
-                    </div>
-                    <div class="p-4">
-                        <span class="text-xs text-amber-600 font-semibold">SALON</span>
-                        <h3 class="text-lg font-bold text-gray-900 mt-1">Salon Beauty</h3>
-                        <p class="text-sm text-gray-600 mt-2">Site cu galerie foto și programări online</p>
-                    </div>
-                </div>
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1 shadow-lg z-10">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                            LIVE
+                        </div>
+                        <!-- Ranking Badge -->
+                        <div class="absolute bottom-2 left-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1 z-10">
+                            <i class="fas fa-trophy"></i>
+                            #1 Google
+                        </div>
 
-                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <i class="fas fa-shopping-cart text-6xl text-white/90 relative z-10"></i>
-                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">LIVE</div>
+                        <!-- Hover overlay text -->
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                                <p class="text-sm font-bold text-gray-900">Vezi Site-ul Live →</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4">
-                        <span class="text-xs text-amber-600 font-semibold">MAGAZIN</span>
-                        <h3 class="text-lg font-bold text-gray-900 mt-1">Magazin Online</h3>
-                        <p class="text-sm text-gray-600 mt-2">E-commerce cu plată online și livrare</p>
-                    </div>
-                </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs text-pink-600 font-semibold">SALON FRUMUSEȚE</span>
+                            <i class="fas fa-external-link-alt text-gray-400 text-xs group-hover:text-pink-600 transition-colors"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mt-1 group-hover:text-pink-600 transition-colors">Micropigmentare Sprancene</h3>
+                        <p class="text-sm text-gray-600 mt-2 mb-3">Website + SEO Local • Ploiești</p>
 
-                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <i class="fas fa-briefcase text-6xl text-white/90 relative z-10"></i>
-                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">LIVE</div>
+                        <!-- Results -->
+                        <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-gray-100">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-green-600">+400%</div>
+                                <div class="text-xs text-gray-500">Trafic</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-purple-600">+250%</div>
+                                <div class="text-xs text-gray-500">Programări</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-4">
-                        <span class="text-xs text-amber-600 font-semibold">SERVICII</span>
-                        <h3 class="text-lg font-bold text-gray-900 mt-1">Firma Consultanță</h3>
-                        <p class="text-sm text-gray-600 mt-2">Site corporate cu blog și portofoliu</p>
-                    </div>
-                </div>
+                </a>
 
-                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative">
-                    <div class="h-48 bg-gradient-to-br from-teal-400 to-blue-500 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <i class="fas fa-stethoscope text-6xl text-white/90 relative z-10"></i>
-                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">LIVE</div>
-                    </div>
-                    <div class="p-4">
-                        <span class="text-xs text-amber-600 font-semibold">MEDICAL</span>
-                        <h3 class="text-lg font-bold text-gray-900 mt-1">Clinică Medicală</h3>
-                        <p class="text-sm text-gray-600 mt-2">Website cu programări și portal pacienți</p>
-                    </div>
-                </div>
+                <!-- Real Client - Indepartare Tatuaj -->
+                <a href="https://www.indepartaretatuaj.ro" target="_blank" rel="noopener noreferrer nofollow" class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative group">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="/indepartareLaser.ro.png" alt="Îndepărtare Tatuaj" class="w-full h-full object-cover object-top" />
+                        <!-- Dark overlay for better badge visibility -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 group-hover:from-black/30 group-hover:via-black/20 group-hover:to-black/40 transition-all duration-300"></div>
 
-                <div class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative">
-                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <i class="fas fa-wrench text-6xl text-white/90 relative z-10"></i>
-                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">LIVE</div>
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1 shadow-lg z-10">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                            LIVE
+                        </div>
+
+                        <!-- Hover overlay text -->
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                                <p class="text-sm font-bold text-gray-900">Vezi Site-ul Live →</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-4">
-                        <span class="text-xs text-amber-600 font-semibold">MEȘTEȘUGAR</span>
-                        <h3 class="text-lg font-bold text-gray-900 mt-1">Instalator Autorizat</h3>
-                        <p class="text-sm text-gray-600 mt-2">Site de prezentare cu galerie lucrări</p>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs text-blue-600 font-semibold">CLINICĂ ESTETICĂ</span>
+                            <i class="fas fa-external-link-alt text-gray-400 text-xs group-hover:text-blue-600 transition-colors"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mt-1 group-hover:text-blue-600 transition-colors">Îndepărtare Tatuaj</h3>
+                        <p class="text-sm text-gray-600 mt-2 mb-3">Website + SEO Local • Ploiești</p>
+
+                        <!-- Results -->
+                        <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-gray-100">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-green-600">+320%</div>
+                                <div class="text-xs text-gray-500">Trafic</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-purple-600">+180%</div>
+                                <div class="text-xs text-gray-500">Programări</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </a>
+
+                <!-- Real Client - Micropigmentare Buze -->
+                <a href="https://www.micropigmentarebuze.ro" target="_blank" rel="noopener noreferrer nofollow" class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative group">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="/micropigmentareBuze.png" alt="Micropigmentare Buze Ploiești" class="w-full h-full object-cover object-top" />
+                        <!-- Dark overlay for better badge visibility -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 group-hover:from-black/30 group-hover:via-black/20 group-hover:to-black/40 transition-all duration-300"></div>
+
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold flex items-center gap-1 shadow-lg z-10">
+                            <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                            LIVE
+                        </div>
+
+                        <!-- Hover overlay text -->
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                            <div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
+                                <p class="text-sm font-bold text-gray-900">Vezi Site-ul Live →</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs text-pink-600 font-semibold">SALON FRUMUSEȚE</span>
+                            <i class="fas fa-external-link-alt text-gray-400 text-xs group-hover:text-pink-600 transition-colors"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mt-1 group-hover:text-pink-600 transition-colors">Micropigmentare Buze</h3>
+                        <p class="text-sm text-gray-600 mt-2 mb-3">Website + SEO Local • Ploiești</p>
+
+                        <!-- Results -->
+                        <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-gray-100">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-green-600">+350%</div>
+                                <div class="text-xs text-gray-500">Trafic</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-purple-600">+200%</div>
+                                <div class="text-xs text-gray-500">Programări</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -308,24 +449,24 @@ const featuredArticles = allArticles
     <!-- Social Proof Section -->
     <section class="py-16 bg-gradient-to-r from-green-50 to-blue-50">
         <div class="max-w-screen-xl px-4 mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8"><span class="text-gradient">150+ Afaceri și-au Triplicat Veniturile</span></h2>
+            <h2 class="text-3xl font-bold mb-8"><span class="text-gradient">150+ Afaceri și-au Triplat Veniturile</span></h2>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div class="premium-card p-6 text-center animate-scale-in">
+                <div class="premium-card p-6 text-center animate-scale-in flex flex-col">
                     <div class="text-4xl font-bold text-gradient mb-2">+300%</div>
-                    <div class="text-gray-600">Creștere clienți</div>
+                    <div class="text-gray-600 flex-grow flex items-center justify-center">Creștere în numărul de clienți</div>
                 </div>
-                <div class="premium-card p-6 text-center animate-scale-in" style="animation-delay: 0.2s;">
+                <div class="premium-card p-6 text-center animate-scale-in flex flex-col" style="animation-delay: 0.2s;">
                     <div class="text-4xl font-bold text-gradient mb-2">48h</div>
-                    <div class="text-gray-600">Prima programare</div>
+                    <div class="text-gray-600 flex-grow flex items-center justify-center">Prima programare confirmată</div>
                 </div>
-                <div class="premium-card p-6 text-center animate-scale-in" style="animation-delay: 0.4s;">
+                <div class="premium-card p-6 text-center animate-scale-in flex flex-col" style="animation-delay: 0.4s;">
                     <div class="text-4xl font-bold text-gradient mb-2">150+</div>
-                    <div class="text-gray-600">Clienți mulțumiți</div>
+                    <div class="text-gray-600 flex-grow flex items-center justify-center">Clienți mulțumiți</div>
                 </div>
-                <div class="premium-card p-6 text-center animate-scale-in" style="animation-delay: 0.6s;">
+                <div class="premium-card p-6 text-center animate-scale-in flex flex-col" style="animation-delay: 0.6s;">
                     <div class="text-4xl font-bold text-gradient mb-2">⭐4.9</div>
-                    <div class="text-gray-600">Rating mediu</div>
+                    <div class="text-gray-600 flex-grow flex items-center justify-center">Rating mediu</div>
                 </div>
             </div>
 
@@ -346,11 +487,11 @@ const featuredArticles = allArticles
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mr-4"></div>
                         <div>
-                            <div class="font-bold">Dr. Popescu</div>
-                            <div class="text-sm text-gray-600">Clinică Medicală Cluj</div>
+                            <div class="font-bold">Elena Beauty Studio</div>
+                            <div class="text-sm text-gray-600">Salon Coafură Cluj</div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"Website-ul și SEO-ul m-au ajutat să fiu #1 în Cluj pentru consultații pediatrice. Incredibil!"</p>
+                    <p class="text-gray-700 italic">"Site-ul nou și SEO-ul local ne-au adus un număr constant de clienți noi. Suntem pe prima pagină Google!"</p>
                     <div class="text-yellow-500 mt-2">⭐⭐⭐⭐⭐</div>
                 </div>
 
@@ -362,7 +503,7 @@ const featuredArticles = allArticles
                             <div class="text-sm text-gray-600">Salon Manichiură Timișoara</div>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">"Am ajuns să refuz clienți! De la 0 la 200+ programări pe lună. Mulțumesc Digital Pro!"</p>
+                    <p class="text-gray-700 italic">"Am ajuns să refuz clienți! De la 0 la 200+ programări pe lună. Mulțumesc SiteAgency.ro!"</p>
                     <div class="text-yellow-500 mt-2">⭐⭐⭐⭐⭐</div>
                 </div>
             </div>
@@ -400,17 +541,17 @@ const featuredArticles = allArticles
                 <div class="premium-card p-8">
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white text-2xl font-bold">
-                            IP
+                            LC
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Dr. Ion Popescu</h4>
-                            <p class="text-sm text-gray-600">Clinică Dentară • Ploiești</p>
+                            <h4 class="font-bold text-gray-900">Laura Costin</h4>
+                            <p class="text-sm text-gray-600">Salon Extensii Gene • Iași</p>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic mb-4">"Website-ul arată profesionist și pacienții noi sună zilnic. De la 15 la 67 pacienți noi pe lună. Extraordinar!"</p>
+                    <p class="text-gray-700 italic mb-4">"Site-ul arată profesionist și clientele noi rezervă zilnic. De la 8 la 35 programări noi pe lună. Extraordinar!"</p>
                     <div class="flex items-center justify-between">
                         <div class="text-yellow-500">⭐⭐⭐⭐⭐</div>
-                        <span class="text-sm font-bold text-green-600">+347% pacienți</span>
+                        <span class="text-sm font-bold text-green-600">+337% programări</span>
                     </div>
                 </div>
 
@@ -445,42 +586,56 @@ const featuredArticles = allArticles
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 {featuredArticles.map((article) => (
-                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full uppercase">
-                                {article.data.city}
-                            </span>
-                            <span class="text-sm text-gray-500">
-                                {article.data.published_date.toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}
-                            </span>
-                        </div>
-
-                        <h3 class="text-2xl font-bold mb-4 text-gray-900">
-                            {article.data.title}
-                        </h3>
-
-                        <p class="text-gray-600 mb-6">
-                            {article.data.description}
-                        </p>
-
-                        {article.data.case_studies && article.data.case_studies.length > 0 && (
-                            <div class="mb-6 space-y-2">
-                                {article.data.case_studies.slice(0, 2).map((study) => (
-                                    <div class="flex items-center gap-2 text-sm">
-                                        <i class="fas fa-check-circle text-green-500"></i>
-                                        <span class="text-gray-700">{study.business}: <strong class="text-purple-600">{study.result}</strong></span>
-                                    </div>
-                                ))}
+                    <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                        {article.data.image && (
+                            <div class="relative h-48 overflow-hidden">
+                                <Image
+                                    src={article.data.image}
+                                    alt={article.data.title}
+                                    class="w-full h-full object-cover"
+                                    widths={[400, 600]}
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                />
                             </div>
                         )}
 
-                        <a
-                            href={`${import.meta.env.BASE_URL}${article.slug}`}
-                            class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-md hover:shadow-lg"
-                        >
-                            Citeste Articolul
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full uppercase">
+                                    {article.data.city}
+                                </span>
+                                <span class="text-sm text-gray-500">
+                                    {article.data.published_date.toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                </span>
+                            </div>
+
+                            <h3 class="text-2xl font-bold mb-4 text-gray-900">
+                                {article.data.title}
+                            </h3>
+
+                            <p class="text-gray-600 mb-6">
+                                {article.data.description}
+                            </p>
+
+                            {article.data.case_studies && article.data.case_studies.length > 0 && (
+                                <div class="mb-6 space-y-2">
+                                    {article.data.case_studies.slice(0, 2).map((study) => (
+                                        <div class="flex items-center gap-2 text-sm">
+                                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                                            <span class="text-gray-700">{study.business}: <strong class="text-purple-600">{study.result}</strong></span>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
+                            <a
+                                href={`${import.meta.env.BASE_URL}${article.slug}`}
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                            >
+                                Citeste Articolul
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -492,7 +647,7 @@ const featuredArticles = allArticles
         <div class="max-w-screen-xl px-4 mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4"><span class="text-gradient">Întrebări Frecvente</span></h2>
-                <p class="text-xl text-gray-600">Răspunsuri rapide la cele mai comune întrebări</p>
+                <p class="text-xl text-gray-600">Răspunsuri rapide la cele mai comune întrebări despre serviciile noastre</p>
             </div>
 
             <div class="max-w-4xl mx-auto space-y-4">
@@ -674,15 +829,15 @@ const featuredArticles = allArticles
             </div>
 
             <div class="max-w-4xl mx-auto">
-                <div class="premium-card p-10">
-                    <div class="flex items-start gap-6">
-                        <div class="w-24 h-24 flex-shrink-0 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                <div class="premium-card p-6 md:p-10">
+                    <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
+                        <div class="w-24 h-24 flex-shrink-0 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-xl">
                             <i class="fas fa-shield-alt text-white text-4xl"></i>
                         </div>
-                        <div class="flex-grow">
-                            <h3 class="text-3xl font-bold text-gray-900 mb-6">30 Zile Garanție de Rambursare</h3>
+                        <div class="flex-grow text-center md:text-left">
+                            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">30 Zile Garanție de Rambursare</h3>
 
-                            <div class="space-y-4 text-lg text-gray-700 mb-6">
+                            <div class="space-y-4 text-base md:text-lg text-gray-700 mb-6">
                                 <p>
                                     <strong>Ce înseamnă asta?</strong> Dacă implementezi recomandările noastre și nu vezi îmbunătățiri în 30 de zile, îți returnăm banii.
                                 </p>
@@ -691,25 +846,25 @@ const featuredArticles = allArticles
                                 </p>
                             </div>
 
-                            <div class="bg-green-50 border-2 border-green-200 rounded-lg p-6 mb-6">
-                                <p class="text-gray-800 text-center">
+                            <div class="bg-green-50 border-2 border-green-200 rounded-lg p-4 md:p-6 mb-6">
+                                <p class="text-gray-800 text-center text-sm md:text-base">
                                     <i class="fas fa-info-circle text-green-600 mr-2"></i>
                                     <strong>Important:</strong> Garanția acoperă livrarea conform specificațiilor + rezultate măsurabile (apeluri, vizite, poziționare).
                                     <a href="#" class="text-green-600 hover:underline font-semibold">Citește politica completă aici</a>.
                                 </p>
                             </div>
 
-                            <div class="flex flex-wrap gap-6 text-gray-700">
-                                <div class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-600 mr-2 text-xl"></i>
+                            <div class="flex flex-col md:flex-row md:flex-wrap gap-4 md:gap-6 text-gray-700">
+                                <div class="flex items-center justify-start">
+                                    <i class="fas fa-check-circle text-green-500 mr-2 text-xl"></i>
                                     <span><strong>3 revizii</strong> incluse</span>
                                 </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-600 mr-2 text-xl"></i>
+                                <div class="flex items-center justify-start">
+                                    <i class="fas fa-check-circle text-green-500 mr-2 text-xl"></i>
                                     <span><strong>Suport 60 zile</strong> post-lansare</span>
                                 </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-600 mr-2 text-xl"></i>
+                                <div class="flex items-center justify-start">
+                                    <i class="fas fa-check-circle text-green-500 mr-2 text-xl"></i>
                                     <span><strong>Fără costuri</strong> ascunse</span>
                                 </div>
                             </div>
@@ -861,7 +1016,7 @@ const featuredArticles = allArticles
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div class="card-modern p-8">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Solicită o Consultație Gratuită</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Solicită o Consultanță Gratuită</h3>
                         <p class="text-gray-600">Completează formularul și te vom contacta în maxim 2 ore lucrătoare</p>
                     </div>
 
@@ -970,7 +1125,7 @@ const featuredArticles = allArticles
                                 </div>
                                 <div class="flex flex-col justify-center">
                                     <p class="font-semibold text-gray-900">Telefon Direct</p>
-                                    <a href="tel:+40721123456" class="text-purple-600 font-bold text-lg hover:text-purple-700">+40 721 123 456</a>
+                                    <a href="tel:+40721633336" class="text-purple-600 font-bold text-lg hover:text-purple-700">+40 721 633 336</a>
                                     <p class="text-xs text-gray-500 mt-1">Luni-Vineri: 9:00 - 18:00</p>
                                 </div>
                             </div>
@@ -981,7 +1136,7 @@ const featuredArticles = allArticles
                                 </div>
                                 <div class="flex flex-col justify-center">
                                     <p class="font-semibold text-gray-900">Email Business</p>
-                                    <a href="mailto:contact@digitalpro.ro" class="text-blue-600 font-bold text-lg hover:text-blue-700">contact@digitalpro.ro</a>
+                                    <a href="mailto:contact@siteagency.ro" class="text-blue-600 font-bold text-lg hover:text-blue-700">contact@siteagency.ro</a>
                                     <p class="text-xs text-gray-500 mt-1">Răspuns în max. 2 ore</p>
                                 </div>
                             </div>
@@ -991,7 +1146,7 @@ const featuredArticles = allArticles
                         <!-- Quick Actions -->
                         <div class="mt-8 pt-6 border-t border-gray-200">
                             <p class="text-sm font-semibold text-gray-700 mb-4">Contactare Rapidă:</p>
-                            <a href="https://wa.me/40721123456" target="_blank" class="flex items-center justify-center px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg w-full">
+                            <a href="https://wa.me/40721633336" target="_blank" class="flex items-center justify-center px-4 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg w-full">
                                 <i class="fab fa-whatsapp text-xl mr-2"></i>
                                 Scrie-ne pe WhatsApp
                             </a>

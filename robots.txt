@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://digitalpro.ro/sitemap.xml
+Sitemap: https://www.siteagency.ro/sitemap.xml

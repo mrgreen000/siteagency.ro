@@ -8,6 +8,7 @@ keywords:
   - creare site Bucuresti
   - web design Bucuresti
   - agentie creare site
+image: ../../assets/creare_site_bucuresti.png
 hero:
   title: "Creare site Bucuresti cu rezultate masurabile"
   subtitle: "Conectam brandurile locale cu clientii lor prin site-uri rapide, optimizate si orientate pe conversii."
@@ -26,15 +27,15 @@ published_date: 2024-10-03
 featured: true
 ---
 
-Meta title: Creare site Bucuresti: agentie web dedicata afacerilor locale  
-Meta description: Creare site Bucuresti personalizata pentru firme din capitala, cu strategie SEO, UX si conversii masurate, suport complet si studii de caz locale.
+Creare site Bucuresti: agentie web dedicata afacerilor locale  
+Creare site Bucuresti personalizata pentru firme din capitala, cu strategie SEO, UX si conversii masurate, suport complet si studii de caz locale.
 
 # Creare site Bucuresti: ghid complet pentru companii din capitala
 
 Creare site Bucuresti inseamna sa pui in scena experienta digitala corecta pentru cel mai competitiv oras din tara, iar succesul depinde de detalii riguroase. De la prima discutie despre creare site Bucuresti pana la optimizarea pentru conversii, fiecare decizie trebuie sincronizata cu asteptarile publicului urban si exigent al capitalei.
 
 <!-- Image prompt uses keyword: Premium gradient flat illustration of creare site Bucuresti success with upward charts, glowing growth arrows, digital marketing icons, and sleek laptop screens. -->
-![Ilustratie premium creare site Bucuresti](../../assets/creare-site-bucuresti_1.webp)
+![Ilustratie premium creare site Bucuresti](../../assets/creare_site_bucuresti.png)
 
 ## Creare site Bucuresti: contextul digital al capitalei
 

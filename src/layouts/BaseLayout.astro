@@ -16,9 +16,9 @@ interface Props {
 const {
   title,
   description,
-  keywords = "web design romania, seo saloane frumusete, marketing digital clinici medicale, website salon, site clinica, bucuresti",
-  ogImage = "https://digitalpro.ro/assets/images/og-image.jpg",
-  canonicalUrl = "https://digitalpro.ro"
+  keywords = "web design ploiesti, creare site ploiesti, seo ploiesti, web design romania, seo saloane frumusete, marketing digital clinici medicale, website salon, site clinica, agentie web ploiesti",
+  ogImage = "https://www.siteagency.ro/assets/images/og-image.jpg",
+  canonicalUrl = "https://www.siteagency.ro"
 } = Astro.props;
 ---
 
@@ -30,7 +30,7 @@ const {
     <title>{title}</title>
     <meta name="description" content={description}>
     <meta name="keywords" content={keywords}>
-    <meta name="author" content="Digital Pro">
+    <meta name="author" content="SiteAgency.ro">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
@@ -42,7 +42,51 @@ const {
     <meta name="twitter:description" content={description}>
     <link rel="canonical" href={canonicalUrl}>
     <meta name="geo.region" content="RO">
-    <meta name="geo.placename" content="București, România">
+    <meta name="geo.placename" content="Ploiești, Prahova, România">
+
+    <!-- Structured Data - Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SiteAgency.ro",
+      "description": "Agenție de web design, SEO și marketing digital pentru saloane de frumusețe, clinici medicale și afaceri locale din România",
+      "url": "https://www.siteagency.ro",
+      "telephone": "+40721633336",
+      "email": "contact@siteagency.ro",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Str. Ana Ipătescu nr. 10",
+        "addressLocality": "Ploiești",
+        "addressRegion": "Prahova",
+        "postalCode": "100337",
+        "addressCountry": "RO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "44.9333",
+        "longitude": "26.0167"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "priceRange": "€€",
+      "areaServed": {
+        "@type": "Country",
+        "name": "România"
+      },
+      "sameAs": [
+        "https://www.facebook.com/siteagency",
+        "https://www.instagram.com/siteagency",
+        "https://www.linkedin.com/company/siteagency"
+      ]
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`}>

@@ -11,6 +11,7 @@ keywords:
   - "site clinica medicala ploiesti"
   - "seo ploiesti"
   - "agentie web ploiesti"
+image: ../../assets/creare_site_ploiesti.png
 hero:
   title: "Creare site Ploiesti"
   subtitle: "Creare site in Ploiesti profesional pentru saloane de frumusete, clinici medicale si afaceri locale."
@@ -36,6 +37,8 @@ Daca ai o afacere in Ploiesti si inca nu ai un site web profesional, pierzi in f
 Am lucrat cu peste 50 de afaceri locale din Prahova in ultimii 3 ani. De la saloane de frumusete la clinici stomatologice si restaurante, am vazut cum un site bine realizat poate transforma complet o afacere locala.
 
 Mai jos iti explic tot ce trebuie sa stii despre creare site Ploiesti, cat costa, cat dureaza si cum alegi agentia potrivita pentru afacerea ta.
+
+![Creare site Ploiesti](../../assets/creare_site_ploiesti.png)
 
 ## De ce are afacerea ta din Ploiesti nevoie de un site web
 
