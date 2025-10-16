@@ -1,11 +1,11 @@
 {
-  "name": "digital-pro-agency",
+  "name": "site-agency",
   "version": "1.0.0",
   "description": "Professional agency website for web design, SEO, and digital marketing services",
   "main": "index.html",
   "scripts": {
     "dev": "astro dev --port 5177",
-    "build": "astro build",
+    "build": "BASE_URL=/ astro build",
     "preview": "astro preview",
     "dev:vite": "vite --port 5177",
     "build:vite": "vite build"
@@ -23,7 +23,7 @@
     "digital-marketing",
     "romanian-business"
   ],
-  "author": "Digital Pro",
+  "author": "SiteAgency.ro",
   "license": "MIT",
   "dependencies": {
     "astro": "^5.14.1",

@@ -1,15 +1,6 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "BASE_URL=/ npm run build",
   "outputDirectory": "dist",
   "framework": "astro",
-  "build": {
-    "env": {
-      "BASE_URL": "/",
-      "PUBLIC_BASE_URL": "/"
-    }
-  },
-  "env": {
-    "BASE_URL": "/",
-    "PUBLIC_BASE_URL": "/"
-  }
+  "installCommand": "npm install"
 }
