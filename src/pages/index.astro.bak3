@@ -101,9 +101,9 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
                                     <div class="text-sm text-gray-600">www.micropigmentaresprancene.ro</div>
                                     <div class="ml-auto bg-green-500 text-white px-2 py-0.5 rounded text-xs font-bold">LIVE</div>
                                 </div>
-                                <div class="text-blue-700 hover:underline font-medium text-base mb-1 cursor-pointer">
+                                <h3 class="text-blue-700 hover:underline font-medium text-base mb-1 cursor-pointer">
                                     Micropigmentare Ploiești - Salon Autorizat
-                                </div>
+                                </h3>
                                 <p class="text-sm text-gray-600 line-clamp-2">
                                     Micropigmentare în Ploiești. Rezultate naturale, durabile. Specialist certificat...
                                 </p>
@@ -121,9 +121,9 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
                                 <i class="fas fa-globe text-gray-400 text-sm"></i>
                                 <div class="text-sm text-gray-500">www.altcompetitor.ro</div>
                             </div>
-                            <div class="text-blue-600 text-sm mb-0.5">
+                            <h3 class="text-blue-600 text-sm mb-0.5">
                                 Alt Salon Micropigmentare...
-                            </div>
+                            </h3>
                             <p class="text-sm text-gray-500">Salon de micropigmentare...</p>
                         </div>
 
@@ -133,9 +133,9 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
                                 <i class="fas fa-globe text-gray-400 text-sm"></i>
                                 <div class="text-sm text-gray-500">www.competitor2.ro</div>
                             </div>
-                            <div class="text-blue-600 text-sm mb-0.5">
+                            <h3 class="text-blue-600 text-sm mb-0.5">
                                 Micropigmentare Ploiești...
-                            </div>
+                            </h3>
                             <p class="text-sm text-gray-500">Oferim servicii de...</p>
                         </div>
 
@@ -531,7 +531,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
                             AM
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-900">Ana Marin</h3>
+                            <h4 class="font-bold text-gray-900">Ana Marin</h4>
                             <p class="text-sm text-gray-600">Salon Beauty Touch • București</p>
                         </div>
                     </div>
@@ -549,7 +549,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
                             LC
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-900">Laura Costin</h3>
+                            <h4 class="font-bold text-gray-900">Laura Costin</h4>
                             <p class="text-sm text-gray-600">Salon Extensii Gene • Iași</p>
                         </div>
                     </div>
@@ -567,7 +567,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
                             MV
                         </div>
                         <div>
-                            <h3 class="font-bold text-gray-900">Maria Vasilescu</h3>
+                            <h4 class="font-bold text-gray-900">Maria Vasilescu</h4>
                             <p class="text-sm text-gray-600">Salon Nails & Beauty • Brașov</p>
                         </div>
                     </div>
@@ -688,9 +688,9 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 3 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Ce se întâmplă dacă nu sunt mulțumit de rezultat?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
                         <span class="font-bold text-lg text-gray-900">Ce se întâmplă dacă nu sunt mulțumit de rezultat?</span>
-                        <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
+                        <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300"></i>
                     </button>
                     <div class="faq-answer hidden px-6 pb-6">
                         <p class="text-gray-700 leading-relaxed">
@@ -703,7 +703,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 4 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Pot să-mi modific singur conținutul pe website?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Ce se întâmplă dacă nu sunt mulțumit de rezultat?" aria-expanded="false">
                         <span class="font-bold text-lg text-gray-900">Pot să-mi modific singur conținutul pe website?</span>
                         <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
                     </button>
@@ -719,7 +719,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 5 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Cum funcționează garanția de +300% clienți?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
                         <span class="font-bold text-lg text-gray-900">Cum funcționează garanția de +300% clienți?</span>
                         <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
                     </button>
@@ -735,7 +735,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 6 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Ce informații aveți nevoie de la mine?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
                         <span class="font-bold text-lg text-gray-900">Ce informații aveți nevoie de la mine?</span>
                         <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
                     </button>
@@ -752,7 +752,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 7 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Cum se fac plățile?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
                         <span class="font-bold text-lg text-gray-900">Cum se fac plățile?</span>
                         <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
                     </button>
@@ -768,7 +768,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 8 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Lucrați doar cu saloane și clinici?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
                         <span class="font-bold text-lg text-gray-900">Lucrați doar cu saloane și clinici?</span>
                         <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
                     </button>
@@ -783,7 +783,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 9 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Cât costă după primul an?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
                         <span class="font-bold text-lg text-gray-900">Cât costă după primul an?</span>
                         <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
                     </button>
@@ -798,7 +798,7 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
 
                 <!-- FAQ Item 10 -->
                 <div class="premium-card overflow-hidden">
-                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)" aria-label="Întrebare: Dacă nu am poze sau texte pentru site?" aria-expanded="false">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors" onclick="toggleFAQ(this)">
                         <span class="font-bold text-lg text-gray-900">Dacă nu am poze sau texte pentru site?</span>
                         <i class="fas fa-chevron-down text-pink-600 transition-transform duration-300" aria-hidden="true"></i>
                     </button>
@@ -1170,17 +1170,17 @@ import microbuzeImg from '/public/micropigmentareBuze.png';
                     <div class="premium-card p-6">
                         <h4 class="text-lg font-bold text-gray-900 mb-4">Urmărește-ne pe Social Media</h4>
                         <div class="flex space-x-3">
-                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Vizitează pagina noastră de Facebook">
-                                <i class="fab fa-facebook-f text-xl" aria-hidden="true"></i>
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-facebook-f text-xl"></i>
                             </a>
-                            <a href="#" class="bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Urmărește-ne pe Instagram">
-                                <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
+                            <a href="#" class="bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-instagram text-xl"></i>
                             </a>
-                            <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Conectează-te cu noi pe LinkedIn">
-                                <i class="fab fa-linkedin-in text-xl" aria-hidden="true"></i>
+                            <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-linkedin-in text-xl"></i>
                             </a>
-                            <a href="#" class="bg-red-600 hover:bg-red-700 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Abonează-te la canalul nostru YouTube">
-                                <i class="fab fa-youtube text-xl" aria-hidden="true"></i>
+                            <a href="#" class="bg-red-600 hover:bg-red-700 text-white w-12 h-12 flex items-center justify-center rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                <i class="fab fa-youtube text-xl"></i>
                             </a>
                         </div>
                     </div>

@@ -49,11 +49,12 @@ featured: true
 - **Fără footprint de LLM**: nu menționa AI, articole, modele de limbaj.  
 - Nu folosi `--` (cratimă dublă) sau semne artificiale; folosește punctuație normală.  
 - Toate titlurile în **sentence case**: doar primul cuvânt capitalizat.  
-- Scrie **fără diacritice** (doar litere latine standard).  
-- Adaugă **exemple, statistici, comparații și sfaturi practice** pentru a transmite expertiză și încredere.  
-- Optimizează fiecare secțiune pentru **intenția de căutare** a utilizatorilor.  
+- Scrie **fără diacritice** (doar litere latine standard).
+- Adaugă **exemple, statistici, comparații și sfaturi practice** pentru a transmite expertiză și încredere.
+- Optimizează fiecare secțiune pentru **intenția de căutare** a utilizatorilor.
 - Încheie cu o concluzie și un **call-to-action** (programare, contact, ofertă).
-- adauga 2-3 poze emblematice de pe web, cu numele fiind keyword_name_number.jpg si includele prin text intr-un mod frumos. salveaza imaginile generate in src/assets/
+- adauga 2 poze emblematice de pe web, cu numele fiind keywordul folosit si in format webp si includele prin text intr-un mod frumos. salveaza imaginile generate in src/assets/
+- prima imagine trebuie adaugata in frontmatter la campul `image: ../../assets/keyword_name_1.webp` pentru a aparea pe homepage
 - Structura finală obligatorie:  
   - Meta title  
   - Meta description  

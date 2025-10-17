@@ -250,9 +250,49 @@ input:focus, textarea:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent; /* Fallback for browsers that don't support -webkit-text-fill-color */
-  /* Ensure text remains readable if gradients fail */
+  /* Fallback for browsers that don't support -webkit-text-fill-color */
+  color: #0f172a;
   text-shadow: none;
+}
+
+/* Ensure all text links are distinguishable and accessible */
+a:not(.btn-primary):not(.btn-secondary):not([class*="bg-"]):not([class*="rounded"]) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:not(.btn-primary):not(.btn-secondary):not([class*="bg-"]):not([class*="rounded"]):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Focus visible state for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ef2b70;
+  outline-offset: 2px;
+}
+
+/* Ensure nav links have sufficient contrast and visual indicators */
+nav a,
+footer a {
+  transition: all 0.2s ease;
+}
+
+/* Portfolio links should maintain underline on hover for clarity */
+.portfolio-item:hover {
+  text-decoration: none;
+}
+
+/* Social media icon links - ensure they have focus rings */
+a[aria-label*="Facebook"],
+a[aria-label*="Instagram"],
+a[aria-label*="LinkedIn"],
+a[aria-label*="YouTube"] {
+  text-decoration: none;
 }
 
 /* Removed pulse glow - too distracting */

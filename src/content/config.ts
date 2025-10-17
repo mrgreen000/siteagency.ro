@@ -1,8 +1,9 @@
 import { defineCollection, z } from 'astro:content';
+import { image } from 'astro:assets';
 
   const articlesCollection = defineCollection({
     type: 'content',  // This means it's markdown/MDX
-    schema: z.object({
+    schema: ({ image }) => z.object({
       // Required fields
       title: z.string(),
       description: z.string(),
@@ -16,6 +17,9 @@ import { defineCollection, z } from 'astro:content';
 
       // Array of strings for keywords
       keywords: z.array(z.string()),
+
+      // Featured image for article cards
+      image: image().optional(),
 
       // Nested object for hero section
       hero: z.object({
