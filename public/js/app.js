@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.querySelectorAll(`.nav-link[href="${href}"]`).forEach(link => {
                         link.classList.add('active');
                     });
-                    console.log('Menu clicked:', href, '- Active class added');
                 }
 
                 // Calculate offset for sticky header (offer bar + nav = ~112px)
@@ -135,8 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSection = 'home';
         }
 
-        console.log('Current section:', currentSection);
-
         // Update navigation links
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
@@ -192,7 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
             acceptButton.addEventListener('click', function() {
                 localStorage.setItem('cookies-accepted', 'true');
                 cookieBar.style.display = 'none';
-                console.log('Cookies accepted');
             });
         }
 
@@ -200,7 +196,6 @@ document.addEventListener('DOMContentLoaded', function() {
             rejectButton.addEventListener('click', function() {
                 localStorage.setItem('cookies-accepted', 'false');
                 cookieBar.style.display = 'none';
-                console.log('Only essential cookies');
             });
         }
     }
