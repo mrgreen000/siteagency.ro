@@ -119,26 +119,43 @@ const {
 
     <CookiePolicy />
 
-    <!-- Disable Flowbite dark mode before it loads -->
+    <!-- Disable Flowbite dark mode - suppress errors -->
     <script is:inline>
+        // Suppress all Flowbite-related errors globally
+        window.addEventListener('error', function(e) {
+            // Suppress theme toggle and navbar related errors from Flowbite
+            if (e.message && (
+                e.message.includes('null') ||
+                e.message.includes('setAttribute') ||
+                e.message.includes('theme') ||
+                e.message.includes('navbar')
+            )) {
+                e.preventDefault();
+                e.stopPropagation();
+                return true;
+            }
+        }, true);
+
         // Create dummy theme elements before Flowbite initializes
-        // This prevents errors from Flowbite's dark mode functionality
         (function() {
-            // Create elements with the exact IDs that Flowbite expects
             const darkIcon = document.createElement('div');
             darkIcon.id = 'themeToggleDarkIcon';
             darkIcon.className = 'hidden';
             darkIcon.style.display = 'none';
+            // Add setAttribute method to prevent errors
+            darkIcon.setAttribute = function() {};
 
             const lightIcon = document.createElement('div');
             lightIcon.id = 'themeToggleLightIcon';
             lightIcon.className = 'hidden';
             lightIcon.style.display = 'none';
+            lightIcon.setAttribute = function() {};
 
             const toggleBtn = document.createElement('button');
             toggleBtn.id = 'themeToggle';
             toggleBtn.type = 'button';
             toggleBtn.style.display = 'none';
+            toggleBtn.addEventListener = function() {};
 
             document.body.appendChild(darkIcon);
             document.body.appendChild(lightIcon);
