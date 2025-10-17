@@ -119,25 +119,34 @@ const {
 
     <CookiePolicy />
 
-    <!-- Hidden dummy elements for Flowbite compatibility -->
-    <div id="themeToggleDarkIcon" class="hidden" style="display: none !important;"></div>
-    <div id="themeToggleLightIcon" class="hidden" style="display: none !important;"></div>
-    <button id="themeToggle" style="display: none !important;"></button>
-
-    <!-- Flowbite Pro JS (Local) with error handling -->
+    <!-- Disable Flowbite dark mode before it loads -->
     <script is:inline>
-        // Suppress Flowbite errors for missing elements
-        window.addEventListener('error', function(e) {
-            if (e.message && (
-                e.message.includes('null is not an object') ||
-                e.message.includes('Cannot read property') ||
-                e.message.includes('navbar')
-            )) {
-                e.preventDefault();
-                return true;
-            }
-        }, true);
+        // Create dummy theme elements before Flowbite initializes
+        // This prevents errors from Flowbite's dark mode functionality
+        (function() {
+            // Create elements with the exact IDs that Flowbite expects
+            const darkIcon = document.createElement('div');
+            darkIcon.id = 'themeToggleDarkIcon';
+            darkIcon.className = 'hidden';
+            darkIcon.style.display = 'none';
+
+            const lightIcon = document.createElement('div');
+            lightIcon.id = 'themeToggleLightIcon';
+            lightIcon.className = 'hidden';
+            lightIcon.style.display = 'none';
+
+            const toggleBtn = document.createElement('button');
+            toggleBtn.id = 'themeToggle';
+            toggleBtn.type = 'button';
+            toggleBtn.style.display = 'none';
+
+            document.body.appendChild(darkIcon);
+            document.body.appendChild(lightIcon);
+            document.body.appendChild(toggleBtn);
+        })();
     </script>
+
+    <!-- Flowbite Pro JS (Local) -->
     <script is:inline src="/js/flowbite.js"></script>
 
     <!-- Custom App JS -->

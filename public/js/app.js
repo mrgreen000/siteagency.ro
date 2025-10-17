@@ -206,22 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Handle Flowbite theme toggle errors gracefully
-window.addEventListener('error', function(e) {
-    if (e.message.includes('themeToggleDarkIcon') || e.message.includes('themeToggleLightIcon')) {
-        console.log('Theme toggle elements not found - this is expected for this design');
-        e.preventDefault();
-        return true;
-    }
-});
-
-// Disable Flowbite dark mode functionality since we don't use it
+// Helper functions
 if (typeof window !== 'undefined') {
-    // Override the dark mode functions to prevent errors
-    window.toggleDarkMode = function() {
-        console.log('Dark mode not implemented in this design');
-    };
-
     // Helper function to reset cookie consent (for testing)
     // Can be called from console: resetCookieConsent()
     window.resetCookieConsent = function() {
