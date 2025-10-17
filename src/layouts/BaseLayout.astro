@@ -93,14 +93,19 @@ const {
     <link rel="shortcut icon" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/favicon.svg">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="/css/flowbite.css" as="style">
+    <link rel="preload" href="/css/custom.css" as="style">
 
     <!-- Flowbite Pro (Local) - after Tailwind -->
     <link rel="stylesheet" href="/css/flowbite.css">
 
     <!-- Custom CSS - loaded last to override -->
     <link rel="stylesheet" href="/css/custom.css">
+
+    <!-- Font Awesome for icons - deferred to avoid blocking -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 </head>
 <body class="bg-gray-50">
 

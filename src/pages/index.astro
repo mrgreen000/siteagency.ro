@@ -9,6 +9,11 @@ const featuredArticles = allArticles
   .filter(article => article.data.featured)
   .sort((a, b) => b.data.published_date.getTime() - a.data.published_date.getTime())
   .slice(0, 4);
+
+// Import portfolio images for optimization
+import microspranceneImg from '/public/micropigmentaresprancene.ro.png';
+import indepartareImg from '/public/indepartareLaser.ro.png';
+import microbuzeImg from '/public/micropigmentareBuze.png';
 ---
 
 <BaseLayout
@@ -318,7 +323,7 @@ const featuredArticles = allArticles
                 <!-- Real Client - Micropigmentare Sprancene -->
                 <a href="https://www.micropigmentaresprancene.ro" target="_blank" rel="noopener noreferrer nofollow" class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative group">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="/micropigmentaresprancene.ro.png" alt="Micropigmentare Sprancene Ploiești" class="w-full h-full object-cover object-top" />
+                        <Image src={microspranceneImg} alt="Micropigmentare Sprancene Ploiești" class="w-full h-full object-cover object-top" loading="lazy" widths={[400, 600]} sizes="(max-width: 768px) 100vw, 33vw" />
                         <!-- Dark overlay for better badge visibility -->
                         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 group-hover:from-black/30 group-hover:via-black/20 group-hover:to-black/40 transition-all duration-300"></div>
 
@@ -364,7 +369,7 @@ const featuredArticles = allArticles
                 <!-- Real Client - Indepartare Tatuaj -->
                 <a href="https://www.indepartaretatuaj.ro" target="_blank" rel="noopener noreferrer nofollow" class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative group">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="/indepartareLaser.ro.png" alt="Îndepărtare Tatuaj" class="w-full h-full object-cover object-top" />
+                        <Image src={indepartareImg} alt="Îndepărtare Tatuaj" class="w-full h-full object-cover object-top" loading="lazy" widths={[400, 600]} sizes="(max-width: 768px) 100vw, 33vw" />
                         <!-- Dark overlay for better badge visibility -->
                         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 group-hover:from-black/30 group-hover:via-black/20 group-hover:to-black/40 transition-all duration-300"></div>
 
@@ -405,7 +410,7 @@ const featuredArticles = allArticles
                 <!-- Real Client - Micropigmentare Buze -->
                 <a href="https://www.micropigmentarebuze.ro" target="_blank" rel="noopener noreferrer nofollow" class="portfolio-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 relative group">
                     <div class="h-48 relative overflow-hidden">
-                        <img src="/micropigmentareBuze.png" alt="Micropigmentare Buze Ploiești" class="w-full h-full object-cover object-top" />
+                        <Image src={microbuzeImg} alt="Micropigmentare Buze Ploiești" class="w-full h-full object-cover object-top" loading="lazy" widths={[400, 600]} sizes="(max-width: 768px) 100vw, 33vw" />
                         <!-- Dark overlay for better badge visibility -->
                         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50 group-hover:from-black/30 group-hover:via-black/20 group-hover:to-black/40 transition-all duration-300"></div>
 
