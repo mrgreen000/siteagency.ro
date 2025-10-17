@@ -256,14 +256,21 @@ input:focus, textarea:focus {
 }
 
 /* Ensure all text links are distinguishable and accessible */
-a:not(.btn-primary):not(.btn-secondary):not([class*="bg-"]):not([class*="rounded"]) {
+/* Exclude navigation, logo, and icon-based links */
+a:not(.btn-primary):not(.btn-secondary):not([class*="bg-"]):not([class*="rounded"]):not(.nav-link):not([href="#home"]):not(.portfolio-item) {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 
-a:not(.btn-primary):not(.btn-secondary):not([class*="bg-"]):not([class*="rounded"]):hover {
+a:not(.btn-primary):not(.btn-secondary):not([class*="bg-"]):not([class*="rounded"]):not(.nav-link):not([href="#home"]):not(.portfolio-item):hover {
   text-decoration-thickness: 2px;
+}
+
+/* Navigation links should not have underlines */
+nav a,
+header a {
+  text-decoration: none !important;
 }
 
 /* Focus visible state for all interactive elements */
