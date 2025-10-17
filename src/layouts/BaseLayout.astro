@@ -88,24 +88,36 @@ const {
     }
     </script>
 
+    <!-- DNS Prefetch and Preconnect for CDN resources -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="shortcut icon" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/favicon.svg">
 
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="/css/flowbite.css" as="style">
-    <link rel="preload" href="/css/custom.css" as="style">
-
-    <!-- Flowbite Pro (Local) - after Tailwind -->
-    <link rel="stylesheet" href="/css/flowbite.css">
-
-    <!-- Custom CSS - loaded last to override -->
+    <!-- Critical CSS - loaded synchronously -->
     <link rel="stylesheet" href="/css/custom.css">
 
-    <!-- Font Awesome for icons - deferred to avoid blocking -->
+    <!-- Non-critical Flowbite CSS - deferred for better FCP/LCP -->
+    <link rel="preload" href="/css/flowbite.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/css/flowbite.css"></noscript>
+
+    <!-- Font Awesome for icons - deferred with font-display swap -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <style>
+        /* Font-display swap for Font Awesome to prevent layout shift */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-display: swap;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
 
@@ -168,10 +180,10 @@ const {
         })();
     </script>
 
-    <!-- Flowbite Pro JS (Local) -->
-    <script is:inline src="/js/flowbite.js"></script>
+    <!-- Flowbite Pro JS (Local) - deferred for better performance -->
+    <script src="/js/flowbite.js" defer></script>
 
-    <!-- Custom App JS -->
-    <script is:inline src="/js/app.js"></script>
+    <!-- Custom App JS - deferred for better performance -->
+    <script src="/js/app.js" defer></script>
 </body>
 </html>
